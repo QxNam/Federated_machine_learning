@@ -1,21 +1,411 @@
 Patient id,Patient age,Laterality,View,Acquisition date,File name,Acr,Bi-rads,Mass ,Micros,Distortion,Asymmetry,Findings notes (in portuguese),Other notes,Lesion annotation status,Pectoral muscle annotation,Other annotations,Path,Cancer,Path_save
-removed,removed,L,CC,201001,53587599,2,2,,X,,,calcificações benignas,,CANCER,,,53587599_11e6732579acf692_MG_L_CC_ANON.png,1,images/53587599_11e6732579acf692_MG_L_CC_ANON.png
-removed,removed,R,MLO,200901,50994841,3,4c,,X,,,micros,,CANCER,,,50994841_069212ec65a94339_MG_R_ML_ANON.png,1,images/50994841_069212ec65a94339_MG_R_ML_ANON.png
-removed,removed,L,CC,200902,20587320,1,2,,X,,,micros,,CANCER,,,20587320_e634830794f5c1bd_MG_L_CC_ANON.png,1,images/20587320_e634830794f5c1bd_MG_L_CC_ANON.png
-removed,removed,R,MLO,200901,24055328,2,3,,X,,,micros,,CANCER,,,24055328_1e10aef17c9fe149_MG_R_ML_ANON.png,1,images/24055328_1e10aef17c9fe149_MG_R_ML_ANON.png
-removed,removed,R,MLO,201001,53587717,1,2,,X,,,calcificações - follow up,,CANCER,,,53587717_5fb370d4c1c71974_MG_R_ML_ANON.png,1,images/53587717_5fb370d4c1c71974_MG_R_ML_ANON.png
-removed,removed,R,CC,201001,53587508,2,2,,X,,,micro,,CANCER,,,53587508_d2befe622e188943_MG_R_CC_ANON.png,1,images/53587508_d2befe622e188943_MG_R_CC_ANON.png
-removed,removed,L,CC,201001,22670978,4,4b,,X,,,micros TQS e QSE ; Cluster,,CANCER,,,22670978_f571fd4e63c718e3_MG_L_CC_ANON.png,1,images/22670978_f571fd4e63c718e3_MG_L_CC_ANON.png
-removed,removed,L,CC,201001,50993426,3,2,,X,,,micros,,CANCER,,,50993426_5d85ecc9cf26b254_MG_L_CC_ANON.png,1,images/50993426_5d85ecc9cf26b254_MG_L_CC_ANON.png
-removed,removed,L,MLO,201001,22580732,1,2,X,X,,,nodulo + duas micros,,CANCER,,,22580732_fe7d005dcbbfb46d_MG_L_ML_ANON.png,1,images/22580732_fe7d005dcbbfb46d_MG_L_ML_ANON.png
-removed,removed,R,CC,201001,53580885,2,2,,X,,,micros,,CANCER,,,53580885_51bec6477a7898b9_MG_R_CC_ANON.png,1,images/53580885_51bec6477a7898b9_MG_R_CC_ANON.png
-removed,removed,L,MLO,201001,53581769,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581769_573747ee33ef6e5a_MG_L_ML_ANON.png,0,images/53581769_573747ee33ef6e5a_MG_L_ML_ANON.png
-removed,removed,R,MLO,200901,50999273,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50999273_cb65e8dac169f596_MG_R_ML_ANON.png,0,images/50999273_cb65e8dac169f596_MG_R_ML_ANON.png
-removed,removed,R,MLO,201001,53586388,1,1,,,,,normal follow up,,NO ANNOTATION (NORMAL),,,53586388_dda3c6969a34ff8e_MG_R_ML_ANON.png,0,images/53586388_dda3c6969a34ff8e_MG_R_ML_ANON.png
-removed,removed,R,MLO,201001,50994760,3,1,,,,,normal - follow up - artefacto,,NO ANNOTATION (NORMAL),,Artifact no annotated,50994760_069212ec65a94339_MG_R_ML_ANON.png,0,images/50994760_069212ec65a94339_MG_R_ML_ANON.png
-removed,removed,L,CC,200901,50997053,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50997053_ce5e5e18a261cd29_MG_L_CC_ANON.png,0,images/50997053_ce5e5e18a261cd29_MG_L_CC_ANON.png
-removed,removed,L,MLO,201001,53581379,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581379_b231a8ba4dd4214f_MG_L_ML_ANON.png,0,images/53581379_b231a8ba4dd4214f_MG_L_ML_ANON.png
 removed,removed,R,CC,201001,22678622,4,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22678622_61b13c59bcba149e_MG_R_CC_ANON.png,0,images/22678622_61b13c59bcba149e_MG_R_CC_ANON.png
-removed,removed,L,CC,201001,53582449,1,1,,,,,normal - follow up,,NO ANNOTATION (NORMAL),,,53582449_3f0db31711fc9795_MG_L_CC_ANON.png,0,images/53582449_3f0db31711fc9795_MG_L_CC_ANON.png
-removed,removed,L,MLO,201001,53587690,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53587690_5fb370d4c1c71974_MG_L_ML_ANON.png,0,images/53587690_5fb370d4c1c71974_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,22678646,4,3,X,,,,nódulo,,CANCER,,,22678646_61b13c59bcba149e_MG_L_CC_ANON.png,1,images/22678646_61b13c59bcba149e_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22678670,4,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22678670_61b13c59bcba149e_MG_R_ML_ANON.png,0,images/22678670_61b13c59bcba149e_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22678694,4,3,X,,,,nódulo,,CANCER,,,22678694_61b13c59bcba149e_MG_L_ML_ANON.png,1,images/22678694_61b13c59bcba149e_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,22614074,2,5,X,X,,,nódulo QSE + micros,,CANCER,,,22614074_6bd24a0a42c19ce1_MG_R_CC_ANON.png,1,images/22614074_6bd24a0a42c19ce1_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22614097,2,2,X,X,,,nodulo + micros,,CANCER,,,22614097_6bd24a0a42c19ce1_MG_L_CC_ANON.png,1,images/22614097_6bd24a0a42c19ce1_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22614127,2,5,X,X,,,nódulo QSE  + micros,,CANCER,,,22614127_6bd24a0a42c19ce1_MG_R_ML_ANON.png,1,images/22614127_6bd24a0a42c19ce1_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22614150,2,2,X,X,,,nódulo + micros ,,CANCER,,,22614150_6bd24a0a42c19ce1_MG_L_ML_ANON.png,1,images/22614150_6bd24a0a42c19ce1_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,50997434,3,2,,X,,,micro,,CANCER,,,50997434_97ec8cadfca70d32_MG_L_ML_ANON.png,1,images/50997434_97ec8cadfca70d32_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50997461,3,4a,X,X,,,nodulo QSE + micros,,CANCER,,,50997461_97ec8cadfca70d32_MG_R_ML_ANON.png,1,images/50997461_97ec8cadfca70d32_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50997488,3,2,,X,,,micro,,CANCER,,,50997488_97ec8cadfca70d32_MG_L_CC_ANON.png,1,images/50997488_97ec8cadfca70d32_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50997515,3,4a,X,X,,,nodulo QSE + micros,,CANCER,,,50997515_97ec8cadfca70d32_MG_R_CC_ANON.png,1,images/50997515_97ec8cadfca70d32_MG_R_CC_ANON.png
+removed,removed,L,MLO,200801,24055445,1,4c,X,X,,,Nódulo + micros,,CANCER,,,24055445_ac3185e18ffdc7b6_MG_L_ML_ANON.png,1,images/24055445_ac3185e18ffdc7b6_MG_L_ML_ANON.png
+removed,removed,R,MLO,200801,24055464,1,4c,X,X,,,Nódulo + micros,,CANCER,,,24055464_ac3185e18ffdc7b6_MG_R_ML_ANON.png,1,images/24055464_ac3185e18ffdc7b6_MG_R_ML_ANON.png
+removed,removed,L,CC,200801,24055483,1,4c,X,X,,,nódulo +micros,,CANCER,,,24055483_ac3185e18ffdc7b6_MG_L_CC_ANON.png,1,images/24055483_ac3185e18ffdc7b6_MG_L_CC_ANON.png
+removed,removed,R,CC,200801,24055502,1,4c,X,X,,,Nódulo + micros,,CANCER,,,24055502_ac3185e18ffdc7b6_MG_R_CC_ANON.png,1,images/24055502_ac3185e18ffdc7b6_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22580192,2,3,X,,,,nódulo benigno,,CANCER,,,22580192_5530d5782fc89dd7_MG_R_CC_ANON.png,1,images/22580192_5530d5782fc89dd7_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22580218,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22580218_5530d5782fc89dd7_MG_L_CC_ANON.png,0,images/22580218_5530d5782fc89dd7_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22580244,2,3,X,,,,nodulo benigno,,CANCER,,,22580244_5530d5782fc89dd7_MG_R_ML_ANON.png,1,images/22580244_5530d5782fc89dd7_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22580270,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22580270_5530d5782fc89dd7_MG_L_ML_ANON.png,0,images/22580270_5530d5782fc89dd7_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,50998032,3,2,,X,,,micros + calcificação vasos,,CANCER,,,50998032_66adfbb4f19c76d2_MG_R_CC_ANON.png,1,images/50998032_66adfbb4f19c76d2_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50998059,3,5,,X,,,micros,,CANCER,,,50998059_66adfbb4f19c76d2_MG_L_ML_ANON.png,1,images/50998059_66adfbb4f19c76d2_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50998086,3,2,,X,,,micros + calcificação vasos,,CANCER,,,50998086_66adfbb4f19c76d2_MG_R_ML_ANON.png,1,images/50998086_66adfbb4f19c76d2_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50998113,3,5,,X,,,micros,,CANCER,,,50998113_66adfbb4f19c76d2_MG_L_CC_ANON.png,1,images/50998113_66adfbb4f19c76d2_MG_L_CC_ANON.png
+removed,removed,L,MLO,201001,50997742,1,3,,X,,,micros,,CANCER,,,50997742_cbb6c98a81e69eeb_MG_L_ML_ANON.png,1,images/50997742_cbb6c98a81e69eeb_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50997769,1,3,,X,,,micros,,CANCER,,,50997769_cbb6c98a81e69eeb_MG_R_ML_ANON.png,1,images/50997769_cbb6c98a81e69eeb_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50997796,1,3,,X,,,micros,,CANCER,,,50997796_cbb6c98a81e69eeb_MG_L_CC_ANON.png,1,images/50997796_cbb6c98a81e69eeb_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50997823,1,3,,X,,,micros,,CANCER,,,50997823_cbb6c98a81e69eeb_MG_R_CC_ANON.png,1,images/50997823_cbb6c98a81e69eeb_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22670620,1,2,X,,,,nódulo QSE - já biopsado - fibroadenoma,,CANCER,,,22670620_e15a16f87b4f9782_MG_R_CC_ANON.png,1,images/22670620_e15a16f87b4f9782_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22670643,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22670643_e15a16f87b4f9782_MG_L_CC_ANON.png,0,images/22670643_e15a16f87b4f9782_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22670673,1,2,X,,,,nódulo QSE - já biopsado - fibroadenoma,,CANCER,,,22670673_e15a16f87b4f9782_MG_R_ML_ANON.png,1,images/22670673_e15a16f87b4f9782_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22670703,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22670703_e15a16f87b4f9782_MG_L_ML_ANON.png,0,images/22670703_e15a16f87b4f9782_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,53581379,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581379_b231a8ba4dd4214f_MG_L_ML_ANON.png,0,images/53581379_b231a8ba4dd4214f_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53581406,1,6,X,,,,nodulo QSE,,CANCER,,,53581406_b231a8ba4dd4214f_MG_R_ML_ANON.png,1,images/53581406_b231a8ba4dd4214f_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53581433,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581433_b231a8ba4dd4214f_MG_L_CC_ANON.png,0,images/53581433_b231a8ba4dd4214f_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53581460,1,6,X,,,,nodulo QSE ,,CANCER,,,53581460_b231a8ba4dd4214f_MG_R_CC_ANON.png,1,images/53581460_b231a8ba4dd4214f_MG_R_CC_ANON.png
+removed,removed,L,MLO,200802,24065833,3,2,,X,,,micros,,CANCER,,,24065833_c01f83a1eb283270_MG_L_ML_ANON.png,1,images/24065833_c01f83a1eb283270_MG_L_ML_ANON.png
+removed,removed,R,MLO,200802,24065860,3,2,,X,,,micros,,CANCER,,,24065860_c01f83a1eb283270_MG_R_ML_ANON.png,1,images/24065860_c01f83a1eb283270_MG_R_ML_ANON.png
+removed,removed,L,CC,200802,24065887,3,2,,X,,,micros,,CANCER,,,24065887_c01f83a1eb283270_MG_L_CC_ANON.png,1,images/24065887_c01f83a1eb283270_MG_L_CC_ANON.png
+removed,removed,R,CC,200802,24065914,3,2,,X,,,micros,,CANCER,,,24065914_c01f83a1eb283270_MG_R_CC_ANON.png,1,images/24065914_c01f83a1eb283270_MG_R_CC_ANON.png
+removed,removed,L,MLO,200901,24055877,1,2,,X,,,micro,,CANCER,,,24055877_839819f2eadaf325_MG_L_ML_ANON.png,1,images/24055877_839819f2eadaf325_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24055904,1,2,,X,,,calcificações,,CANCER,,,24055904_839819f2eadaf325_MG_R_ML_ANON.png,1,images/24055904_839819f2eadaf325_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24055931,1,2,,X,,,micro,,CANCER,,,24055931_839819f2eadaf325_MG_L_CC_ANON.png,1,images/24055931_839819f2eadaf325_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,24055958,1,2,,X,,,calcificações,,CANCER,,,24055958_839819f2eadaf325_MG_R_CC_ANON.png,1,images/24055958_839819f2eadaf325_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53587427,2,2,,X,,,micro,,CANCER,,,53587427_d2befe622e188943_MG_L_ML_ANON.png,1,images/53587427_d2befe622e188943_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53587454,2,2,,X,,,micros,,CANCER,,,53587454_d2befe622e188943_MG_R_ML_ANON.png,1,images/53587454_d2befe622e188943_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53587481,2,2,,X,,,micros,,CANCER,,,53587481_d2befe622e188943_MG_L_CC_ANON.png,1,images/53587481_d2befe622e188943_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53587508,2,2,,X,,,micro,,CANCER,,,53587508_d2befe622e188943_MG_R_CC_ANON.png,1,images/53587508_d2befe622e188943_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,51049462,2,2,,X,,,micros,,CANCER,,,51049462_6f64793857feb5d0_MG_L_ML_ANON.png,1,images/51049462_6f64793857feb5d0_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,51049489,2,2,,X,,,microcalcificações,,CANCER,,,51049489_6f64793857feb5d0_MG_R_ML_ANON.png,1,images/51049489_6f64793857feb5d0_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,51049516,2,2,,X,,,micros,,CANCER,,,51049516_6f64793857feb5d0_MG_L_CC_ANON.png,1,images/51049516_6f64793857feb5d0_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,51049543,2,2,,X,,,calcificações,,CANCER,,,51049543_6f64793857feb5d0_MG_R_CC_ANON.png,1,images/51049543_6f64793857feb5d0_MG_R_CC_ANON.png
+removed,removed,L,MLO,200901,51049628,2,2,,X,,,micros,,CANCER,,,51049628_6f64793857feb5d0_MG_L_ML_ANON.png,1,images/51049628_6f64793857feb5d0_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,51049655,2,2,,X,,,calcificações,,CANCER,,,51049655_6f64793857feb5d0_MG_R_ML_ANON.png,1,images/51049655_6f64793857feb5d0_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,51049682,2,2,,X,,,micros,,CANCER,,,51049682_6f64793857feb5d0_MG_L_CC_ANON.png,1,images/51049682_6f64793857feb5d0_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,51070197,2,2,,X,,,calcificações,,CANCER,,,51070197_6f64793857feb5d0_MG_R_CC_ANON.png,1,images/51070197_6f64793857feb5d0_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53580611,1,2,,X,,,micros,,CANCER,,,53580611_40e22f2e3215b954_MG_L_ML_ANON.png,1,images/53580611_40e22f2e3215b954_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53580638,1,3,,X, ,,microcalcificações QSE - junto ao musculo peitoral,,CANCER,,,53580638_40e22f2e3215b954_MG_R_ML_ANON.png,1,images/53580638_40e22f2e3215b954_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53580665,1,2,,X,,,micros,,CANCER,,,53580665_40e22f2e3215b954_MG_L_CC_ANON.png,1,images/53580665_40e22f2e3215b954_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53580692,1,3,,X,,,microcalcificações QSE - junto ao musculo peitoral,,CANCER,,,53580692_40e22f2e3215b954_MG_R_CC_ANON.png,1,images/53580692_40e22f2e3215b954_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53586960,1,2,X,X,,,pós-cirurgia - nódulo com regiao espiculada+ micros,,CANCER,,,53586960_809e3f43339f93c6_MG_L_ML_ANON.png,1,images/53586960_809e3f43339f93c6_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53586987,1,2,,X,,,micros,,CANCER,,,53586987_809e3f43339f93c6_MG_R_ML_ANON.png,1,images/53586987_809e3f43339f93c6_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53587014,1,2,X,X,,,pós-cirurgia - nódulo com regiao espiculada+ micros,,CANCER,,,53587014_809e3f43339f93c6_MG_L_CC_ANON.png,1,images/53587014_809e3f43339f93c6_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53587041,1,2,,X,,,micros,,CANCER,,,53587041_809e3f43339f93c6_MG_R_CC_ANON.png,1,images/53587041_809e3f43339f93c6_MG_R_CC_ANON.png
+removed,removed,L,MLO,200902,51048891,3,2,,X,,,micros,,CANCER,,,51048891_f3e93e889a7746f0_MG_L_ML_ANON.png,1,images/51048891_f3e93e889a7746f0_MG_L_ML_ANON.png
+removed,removed,R,MLO,200902,51048918,3,2,,X,,,micros,,CANCER,,,51048918_f3e93e889a7746f0_MG_R_ML_ANON.png,1,images/51048918_f3e93e889a7746f0_MG_R_ML_ANON.png
+removed,removed,L,CC,200902,51048945,3,2,,X,,,micros,,CANCER,,,51048945_f3e93e889a7746f0_MG_L_CC_ANON.png,1,images/51048945_f3e93e889a7746f0_MG_L_CC_ANON.png
+removed,removed,R,CC,200902,51048972,3,2,,X,,,micros,,CANCER,,,51048972_f3e93e889a7746f0_MG_R_CC_ANON.png,1,images/51048972_f3e93e889a7746f0_MG_R_CC_ANON.png
+removed,removed,R,CC,200901,20588458,2,2,,X,,,micros,,CANCER,,,20588458_bf1a6aaadb05e3df_MG_R_CC_ANON.png,1,images/20588458_bf1a6aaadb05e3df_MG_R_CC_ANON.png
+removed,removed,R,MLO,200901,20588510,2,2,,X,,,2 micros,,CANCER,,,20588510_bf1a6aaadb05e3df_MG_R_ML_ANON.png,1,images/20588510_bf1a6aaadb05e3df_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,20588536,2,5,X,X,,,nodulo QSE + micros,,CANCER,,,20588536_bf1a6aaadb05e3df_MG_L_ML_ANON.png,1,images/20588536_bf1a6aaadb05e3df_MG_L_ML_ANON.png
+removed,removed,L,CC,200901,20588562,2,5,X,X,,,nodulo QSE + micros,,CANCER,,,20588562_bf1a6aaadb05e3df_MG_L_CC_ANON.png,1,images/20588562_bf1a6aaadb05e3df_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,22670809,1,4a,X,X,,,nódulo +  micros,,CANCER,,,22670809_0b7396cdccacca82_MG_R_CC_ANON.png,1,images/22670809_0b7396cdccacca82_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22670832,1,2,,X,,,micros,,CANCER,,,22670832_0b7396cdccacca82_MG_L_CC_ANON.png,1,images/22670832_0b7396cdccacca82_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22670855,1,5,X,X,,,nódulo +  duas calcificações,,CANCER,,,22670855_0b7396cdccacca82_MG_R_ML_ANON.png,1,images/22670855_0b7396cdccacca82_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22670878,1,2,,X,,,micros,,CANCER,,,22670878_0b7396cdccacca82_MG_L_ML_ANON.png,1,images/22670878_0b7396cdccacca82_MG_L_ML_ANON.png
+removed,removed,R,CC,200802,22678953,3,4a,,X,,,microcalcificações QSE;Cluster,,CANCER,,,22678953_b9a4da5f2dae63a9_MG_R_CC_ANON.png,1,images/22678953_b9a4da5f2dae63a9_MG_R_CC_ANON.png
+removed,removed,L,CC,200802,22678980,3,2,,X,,,micros,,CANCER,,,22678980_b9a4da5f2dae63a9_MG_L_CC_ANON.png,1,images/22678980_b9a4da5f2dae63a9_MG_L_CC_ANON.png
+removed,removed,R,MLO,200802,22679008,3,4a,,X,,,microcalcificações QSE;Cluster,,CANCER,,,22679008_b9a4da5f2dae63a9_MG_R_ML_ANON.png,1,images/22679008_b9a4da5f2dae63a9_MG_R_ML_ANON.png
+removed,removed,L,MLO,200802,22679036,3,2,,X,,,micros,,CANCER,,,22679036_b9a4da5f2dae63a9_MG_L_ML_ANON.png,1,images/22679036_b9a4da5f2dae63a9_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,50998413,1,2,,X,,,micros,,CANCER,,,50998413_1f139436acfc5467_MG_L_ML_ANON.png,1,images/50998413_1f139436acfc5467_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50998440,1,2,,X,,,micros,,CANCER,,,50998440_1f139436acfc5467_MG_R_ML_ANON.png,1,images/50998440_1f139436acfc5467_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50998467,1,2,,X,,,micros,,CANCER,,,50998467_1f139436acfc5467_MG_L_CC_ANON.png,1,images/50998467_1f139436acfc5467_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50998494,1,2,,X,,,micros,,CANCER,,,50998494_1f139436acfc5467_MG_R_CC_ANON.png,1,images/50998494_1f139436acfc5467_MG_R_CC_ANON.png
+removed,removed,R,CC,200902,20587294,1,2,,X,,,micros,,CANCER,,,20587294_e634830794f5c1bd_MG_R_CC_ANON.png,1,images/20587294_e634830794f5c1bd_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,20587320,1,2,,X,,,micros,,CANCER,,,20587320_e634830794f5c1bd_MG_L_CC_ANON.png,1,images/20587320_e634830794f5c1bd_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,20587346,1,2,,X,,,micros,,CANCER,,,20587346_e634830794f5c1bd_MG_R_ML_ANON.png,1,images/20587346_e634830794f5c1bd_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,20587372,1,2,,X,,,micros,,CANCER,,,20587372_e634830794f5c1bd_MG_L_ML_ANON.png,1,images/20587372_e634830794f5c1bd_MG_L_ML_ANON.png
+removed,removed,L,CC,200902,20587466,4,2,,X,,,micros,,CANCER,,,20587466_d571b5880ad2a016_MG_L_CC_ANON.png,1,images/20587466_d571b5880ad2a016_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,20587492,4,2,,X,,,micros,,CANCER,not possible,,20587492_d571b5880ad2a016_MG_R_ML_ANON.png,1,images/20587492_d571b5880ad2a016_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,20587518,4,2,,X,,,micros,,CANCER,not possible,,20587518_d571b5880ad2a016_MG_L_ML_ANON.png,1,images/20587518_d571b5880ad2a016_MG_L_ML_ANON.png
+removed,removed,R,CC,200902,20587544,4,2,,X,,,micros,,CANCER,,,20587544_d571b5880ad2a016_MG_R_CC_ANON.png,1,images/20587544_d571b5880ad2a016_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50996201,4,2,,X,,,micros,,CANCER,,,50996201_8c1b2bd64ca4d778_MG_L_ML_ANON.png,1,images/50996201_8c1b2bd64ca4d778_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,50996228,4,2,,X,,,micros,,CANCER,,,50996228_8c1b2bd64ca4d778_MG_L_CC_ANON.png,1,images/50996228_8c1b2bd64ca4d778_MG_L_CC_ANON.png
+removed,removed,L,MLO,201001,50993787,3,2,,X,,,calcificações - follow up,,CANCER,,,50993787_de5e8d61e501a71b_MG_L_ML_ANON.png,1,images/50993787_de5e8d61e501a71b_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50993814,3,2,,X,,,calcificações,,CANCER,,,50993814_de5e8d61e501a71b_MG_R_ML_ANON.png,1,images/50993814_de5e8d61e501a71b_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50993841,3,2,,X,,,calcificações - follow up,,CANCER,,,50993841_de5e8d61e501a71b_MG_L_CC_ANON.png,1,images/50993841_de5e8d61e501a71b_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50993868,3,2,,X,,,calcificações,,CANCER,,,50993868_de5e8d61e501a71b_MG_R_CC_ANON.png,1,images/50993868_de5e8d61e501a71b_MG_R_CC_ANON.png
+removed,removed,L,MLO,200802,50993895,3,2,,X,,,calcificações - follow up,,CANCER,,,50993895_de5e8d61e501a71b_MG_L_ML_ANON.png,1,images/50993895_de5e8d61e501a71b_MG_L_ML_ANON.png
+removed,removed,R,MLO,200802,50993922,3,2,,X,,,calcificações,,CANCER,,,50993922_de5e8d61e501a71b_MG_R_ML_ANON.png,1,images/50993922_de5e8d61e501a71b_MG_R_ML_ANON.png
+removed,removed,L,CC,200802,50993949,3,2,,X,,,calcificações - follow up,,CANCER,,,50993949_de5e8d61e501a71b_MG_L_CC_ANON.png,1,images/50993949_de5e8d61e501a71b_MG_L_CC_ANON.png
+removed,removed,R,CC,200802,50993976,3,2,,X,,,calcificações,,CANCER,,,50993976_de5e8d61e501a71b_MG_R_CC_ANON.png,1,images/50993976_de5e8d61e501a71b_MG_R_CC_ANON.png
+removed,removed,R,CC,200901,22614353,1,2,,X,,,micros,,CANCER,,,22614353_d065adcb9905b973_MG_R_CC_ANON.png,1,images/22614353_d065adcb9905b973_MG_R_CC_ANON.png
+removed,removed,L,CC,200901,22614379,1,5,X,X,,,nódulo + micro,,CANCER,,,22614379_d065adcb9905b973_MG_L_CC_ANON.png,1,images/22614379_d065adcb9905b973_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,22614405,1,2,,X,,,micros,,CANCER,,,22614405_d065adcb9905b973_MG_R_ML_ANON.png,1,images/22614405_d065adcb9905b973_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,22614431,1,5,X,X,,,nódulo + micro,,CANCER,,,22614431_d065adcb9905b973_MG_L_ML_ANON.png,1,images/22614431_d065adcb9905b973_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,53587572,2,2,,X,,,calcificações benignas,,CANCER,,,53587572_11e6732579acf692_MG_L_ML_ANON.png,1,images/53587572_11e6732579acf692_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,53587599,2,2,,X,,,calcificações benignas,,CANCER,,,53587599_11e6732579acf692_MG_L_CC_ANON.png,1,images/53587599_11e6732579acf692_MG_L_CC_ANON.png
+removed,removed,L,MLO,201001,50996800,2,2,,X,,,micros,,CANCER,,,50996800_fdf4a1516f88b280_MG_L_ML_ANON.png,1,images/50996800_fdf4a1516f88b280_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50996827,2,2,,X,,,micros,,CANCER,,,50996827_fdf4a1516f88b280_MG_R_ML_ANON.png,1,images/50996827_fdf4a1516f88b280_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50996854,2,2,,X,,,micros,,CANCER,,,50996854_fdf4a1516f88b280_MG_L_CC_ANON.png,1,images/50996854_fdf4a1516f88b280_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50996881,2,2,,X,,,micros,,CANCER,,,50996881_fdf4a1516f88b280_MG_R_CC_ANON.png,1,images/50996881_fdf4a1516f88b280_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50993399,3,2,,X,,,micros,,CANCER,,,50993399_5d85ecc9cf26b254_MG_L_ML_ANON.png,1,images/50993399_5d85ecc9cf26b254_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,50993426,3,2,,X,,,micros,,CANCER,,,50993426_5d85ecc9cf26b254_MG_L_CC_ANON.png,1,images/50993426_5d85ecc9cf26b254_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,27829134,1,5,X,X,,,nódulo;micros,,CANCER,,,27829134_fbb55bf7fff48540_MG_R_CC_ANON.png,1,images/27829134_fbb55bf7fff48540_MG_R_CC_ANON.png
 removed,removed,L,CC,201001,27829161,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,27829161_fbb55bf7fff48540_MG_L_CC_ANON.png,0,images/27829161_fbb55bf7fff48540_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,27829188,1,5,X,X,,,nódulo;micros,,CANCER,,,27829188_fbb55bf7fff48540_MG_R_ML_ANON.png,1,images/27829188_fbb55bf7fff48540_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,27829215,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,27829215_fbb55bf7fff48540_MG_L_ML_ANON.png,0,images/27829215_fbb55bf7fff48540_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,50997223,4,2,,X,,,micros,,CANCER,,exemplo de onde se deve encontrar microcalcificaçoes,50997223_9054942f7be52dd9_MG_L_ML_ANON.png,1,images/50997223_9054942f7be52dd9_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50997250,4,2,,X,,,micros,,CANCER,,,50997250_9054942f7be52dd9_MG_R_ML_ANON.png,1,images/50997250_9054942f7be52dd9_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50997277,4,2,,X,,,micros,,CANCER,,,50997277_9054942f7be52dd9_MG_L_CC_ANON.png,1,images/50997277_9054942f7be52dd9_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50997304,4,2,,X,,,micros,,CANCER,,,50997304_9054942f7be52dd9_MG_R_CC_ANON.png,1,images/50997304_9054942f7be52dd9_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22670442,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22670442_7e677f3d530e41ed_MG_R_CC_ANON.png,0,images/22670442_7e677f3d530e41ed_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22670465,2,5,X,X,,X,nódulo + micros - QSE; densidade + micros - quadrantes internos; Cluster,,CANCER,,,22670465_7e677f3d530e41ed_MG_L_CC_ANON.png,1,images/22670465_7e677f3d530e41ed_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22670488,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22670488_7e677f3d530e41ed_MG_R_ML_ANON.png,0,images/22670488_7e677f3d530e41ed_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22670511,2,5,X,X,,X,nódulo + micros - QSE; densidade + micros - quadrantes internos; Cluster,,CANCER,,,22670511_7e677f3d530e41ed_MG_L_ML_ANON.png,1,images/22670511_7e677f3d530e41ed_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,53581769,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581769_573747ee33ef6e5a_MG_L_ML_ANON.png,0,images/53581769_573747ee33ef6e5a_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,53581796,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581796_573747ee33ef6e5a_MG_L_CC_ANON.png,0,images/53581796_573747ee33ef6e5a_MG_L_CC_ANON.png
+removed,removed,L,MLO,200901,24065530,4,4c,X,,,,nódulo,,CANCER,,,24065530_d8205a09c8173f44_MG_L_ML_ANON.png,1,images/24065530_d8205a09c8173f44_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24065557,4,2,,X,,,micros,,CANCER,,,24065557_d8205a09c8173f44_MG_R_ML_ANON.png,1,images/24065557_d8205a09c8173f44_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24065584,4,4c,,,,,nódulo,,CANCER,,,24065584_d8205a09c8173f44_MG_L_CC_ANON.png,1,images/24065584_d8205a09c8173f44_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,24065611,4,2,,X,,,micros,,CANCER,,,24065611_d8205a09c8173f44_MG_R_CC_ANON.png,1,images/24065611_d8205a09c8173f44_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53587104,1,2,,X,,,micros,,CANCER,,,53587104_7b71aa9928e6975e_MG_L_ML_ANON.png,1,images/53587104_7b71aa9928e6975e_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,53587131,1,2,,X,,,micros,,CANCER,,,53587131_7b71aa9928e6975e_MG_L_CC_ANON.png,1,images/53587131_7b71aa9928e6975e_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,30011484,1,2,,X,,,micros,,CANCER,,,30011484_349323117bf0fd93_MG_R_CC_ANON.png,1,images/30011484_349323117bf0fd93_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,30011507,1,4c,X,X,,,Nódulo QSI + micros,,CANCER,,,30011507_349323117bf0fd93_MG_L_CC_ANON.png,1,images/30011507_349323117bf0fd93_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,30011530,1,2,,X,,,micros,,CANCER,,,30011530_349323117bf0fd93_MG_R_ML_ANON.png,1,images/30011530_349323117bf0fd93_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,30011553,1,4c,X,X,,,Nódulo QSI + micros,,CANCER,,,30011553_349323117bf0fd93_MG_L_ML_ANON.png,1,images/30011553_349323117bf0fd93_MG_L_ML_ANON.png
+removed,removed,L,MLO,200901,24055573,3,2,,X,,,micros,,CANCER,,,24055573_6f1aef40b3775182_MG_L_ML_ANON.png,1,images/24055573_6f1aef40b3775182_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24055600,3,4c,,X,X,,distorção QII,,CANCER,,,24055600_6f1aef40b3775182_MG_R_ML_ANON.png,1,images/24055600_6f1aef40b3775182_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24055627,3,2,,X,,,micros,,CANCER,,,24055627_6f1aef40b3775182_MG_L_CC_ANON.png,1,images/24055627_6f1aef40b3775182_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,24055654,3,4c,,X,X,,distorção QII,,CANCER,,,24055654_6f1aef40b3775182_MG_R_CC_ANON.png,1,images/24055654_6f1aef40b3775182_MG_R_CC_ANON.png
+removed,removed,L,MLO,200802,24065680,1,2,,X,,,micros,,CANCER,,,24065680_5291e1aee2bbf5df_MG_L_ML_ANON.png,1,images/24065680_5291e1aee2bbf5df_MG_L_ML_ANON.png
+removed,removed,R,MLO,200802,24065707,1,5,X,X,,,nódulo QSE + micros,,CANCER,,,24065707_5291e1aee2bbf5df_MG_R_ML_ANON.png,1,images/24065707_5291e1aee2bbf5df_MG_R_ML_ANON.png
+removed,removed,L,CC,200802,24065734,1,2,,X,,,micros,,CANCER,,,24065734_5291e1aee2bbf5df_MG_L_CC_ANON.png,1,images/24065734_5291e1aee2bbf5df_MG_L_CC_ANON.png
+removed,removed,R,CC,200802,24065761,1,5,X,X,,,nódulo QSE + micros,,CANCER,,,24065761_5291e1aee2bbf5df_MG_R_CC_ANON.png,1,images/24065761_5291e1aee2bbf5df_MG_R_CC_ANON.png
+removed,removed,L,MLO,200902,50999432,1,5,X,X,,,nodulo QSE + 1 micro,,CANCER,,,50999432_f62fbf38fb208316_MG_L_ML_ANON.png,1,images/50999432_f62fbf38fb208316_MG_L_ML_ANON.png
+removed,removed,L,CC,200902,50999459,1,5,X,,,,nodulo QSE,,CANCER,,,50999459_f62fbf38fb208316_MG_L_CC_ANON.png,1,images/50999459_f62fbf38fb208316_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,51048738,3,3,X,,,,fibroadenoma QII,,CANCER,,,51048738_3f22cdda8da215e3_MG_R_ML_ANON.png,1,images/51048738_3f22cdda8da215e3_MG_R_ML_ANON.png
+removed,removed,R,CC,200902,51048765,3,3,X,,,,fibroadenoma QII,,CANCER,,,51048765_3f22cdda8da215e3_MG_R_CC_ANON.png,1,images/51048765_3f22cdda8da215e3_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50998177,3,2,,X,,,calcificações,,CANCER,,,50998177_f34ee0ab6591b792_MG_L_ML_ANON.png,1,images/50998177_f34ee0ab6591b792_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50998204,3,2,,X,,,micros,,CANCER,,,50998204_f34ee0ab6591b792_MG_R_ML_ANON.png,1,images/50998204_f34ee0ab6591b792_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50998231,3,2,,X,,,2 calcificações,,CANCER,,,50998231_f34ee0ab6591b792_MG_L_CC_ANON.png,1,images/50998231_f34ee0ab6591b792_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50998258,3,2,,X,,,micros,,CANCER,,,50998258_f34ee0ab6591b792_MG_R_CC_ANON.png,1,images/50998258_f34ee0ab6591b792_MG_R_CC_ANON.png
+removed,removed,L,MLO,200902,20588308,4,3,X,,,,nodulo QSI ,,CANCER,,,20588308_493155e17143edef_MG_L_ML_ANON.png,1,images/20588308_493155e17143edef_MG_L_ML_ANON.png
+removed,removed,L,CC,200902,20588334,4,3,X,,,,nodulo QSI,,CANCER,,,20588334_493155e17143edef_MG_L_CC_ANON.png,1,images/20588334_493155e17143edef_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,22678787,3,2,X,X,,,nódulo + micros,,CANCER,,,22678787_64a22c47765f0c5c_MG_R_CC_ANON.png,1,images/22678787_64a22c47765f0c5c_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22678810,3,2,,X,,,micros - follow up,,CANCER,,,22678810_64a22c47765f0c5c_MG_L_CC_ANON.png,1,images/22678810_64a22c47765f0c5c_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22678833,3,2,X,X,,,nódulo + micros,,CANCER,,,22678833_64a22c47765f0c5c_MG_R_ML_ANON.png,1,images/22678833_64a22c47765f0c5c_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22678856,3,2,,X,,,micros - follow up,,CANCER,,,22678856_64a22c47765f0c5c_MG_L_ML_ANON.png,1,images/22678856_64a22c47765f0c5c_MG_L_ML_ANON.png
+removed,removed,R,CC,200901,22580341,3,2,X,X,,,macrocistos – nódulos + Micros,,CANCER,,,22580341_5eae9beae14d26fd_MG_R_CC_ANON.png,1,images/22580341_5eae9beae14d26fd_MG_R_CC_ANON.png
+removed,removed,L,CC,200901,22580367,3,2,X,,,,macrocistos - nódulos,,CANCER,,,22580367_5eae9beae14d26fd_MG_L_CC_ANON.png,1,images/22580367_5eae9beae14d26fd_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,22580393,3,2,X,X,,,macrocistos – nódulos + Micros,,CANCER,,,22580393_5eae9beae14d26fd_MG_R_ML_ANON.png,1,images/22580393_5eae9beae14d26fd_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,22580419,3,2,X,,,,macrocistos - nódulos,,CANCER,,,22580419_5eae9beae14d26fd_MG_L_ML_ANON.png,1,images/22580419_5eae9beae14d26fd_MG_L_ML_ANON.png
+removed,removed,L,MLO,200901,24055149,3,5,,X,,,micros;Cluster,,CANCER,,,24055149_606e9b184978a350_MG_L_ML_ANON.png,1,images/24055149_606e9b184978a350_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24055176,3,2,,X,,,micros,,CANCER,,,24055176_606e9b184978a350_MG_R_ML_ANON.png,1,images/24055176_606e9b184978a350_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24055203,3,5,,X,,,micros;Cluster,,CANCER,,,24055203_606e9b184978a350_MG_L_CC_ANON.png,1,images/24055203_606e9b184978a350_MG_L_CC_ANON.png
+removed,removed,R,CC,200902,20587994,3,6,X,X,,,nódulo + uma micro;Spiculated Region,,CANCER,,,20587994_024ee3569b2605dc_MG_R_CC_ANON.png,1,images/20587994_024ee3569b2605dc_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,20588020,3,2,,X,,,micros,,CANCER,,,20588020_024ee3569b2605dc_MG_L_CC_ANON.png,1,images/20588020_024ee3569b2605dc_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,20588046,3,6,X,X,,,Nódulo + uma micro; spiculated region,,CANCER,,,20588046_024ee3569b2605dc_MG_R_ML_ANON.png,1,images/20588046_024ee3569b2605dc_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,20588072,3,2,,X,,,micros,,CANCER,,,20588072_024ee3569b2605dc_MG_L_ML_ANON.png,1,images/20588072_024ee3569b2605dc_MG_L_ML_ANON.png
+removed,removed,R,CC,200902,26933772,3,2,,X,,,micros,,CANCER,,,26933772_f8bfddc28e8045c0_MG_R_CC_ANON.png,1,images/26933772_f8bfddc28e8045c0_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,26933801,3,4b,,X,,,micros;Cluster,,CANCER,,,26933801_f8bfddc28e8045c0_MG_L_CC_ANON.png,1,images/26933801_f8bfddc28e8045c0_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,26933830,3,2,,X,,,micros,,CANCER,,,26933830_f8bfddc28e8045c0_MG_R_ML_ANON.png,1,images/26933830_f8bfddc28e8045c0_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,26933859,3,4b,,X,,,micros;Cluster,,CANCER,,,26933859_f8bfddc28e8045c0_MG_L_ML_ANON.png,1,images/26933859_f8bfddc28e8045c0_MG_L_ML_ANON.png
+removed,removed,R,MLO,200902,50995762,1,2,X,X,,,nodulo + micros,,CANCER,,,50995762_0c735e8768d276b4_MG_R_ML_ANON.png,1,images/50995762_0c735e8768d276b4_MG_R_ML_ANON.png
+removed,removed,R,CC,200902,50995789,1,2,X,X,,,nodulo + micros,,CANCER,,,50995789_0c735e8768d276b4_MG_R_CC_ANON.png,1,images/50995789_0c735e8768d276b4_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22670278,1,4c,X,,,,nódulo QSE,,CANCER,,,22670278_98429c0bdf78c0c7_MG_R_CC_ANON.png,1,images/22670278_98429c0bdf78c0c7_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22670301,1,2,,X,,,micros,,CANCER,,,22670301_98429c0bdf78c0c7_MG_L_CC_ANON.png,1,images/22670301_98429c0bdf78c0c7_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22670324,1,4c,X,,,,nódulo QSE,,CANCER,,,22670324_98429c0bdf78c0c7_MG_R_ML_ANON.png,1,images/22670324_98429c0bdf78c0c7_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22670347,1,2,,X,,,1 micro,,CANCER,,,22670347_98429c0bdf78c0c7_MG_L_ML_ANON.png,1,images/22670347_98429c0bdf78c0c7_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53582540,                                                                                                                                                                                                 ,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53582540_3e73f1c0670cfb0a_MG_R_ML_ANON.png,0,images/53582540_3e73f1c0670cfb0a_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,53582567,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53582567_3e73f1c0670cfb0a_MG_R_CC_ANON.png,0,images/53582567_3e73f1c0670cfb0a_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22427682,2,2,,X,,,micros ,,CANCER,,,22427682_d713ef5849f98b6c_MG_R_CC_ANON.png,1,images/22427682_d713ef5849f98b6c_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22427705,2,5,X,X,,,nódulo + micros,,CANCER,,,22427705_d713ef5849f98b6c_MG_L_CC_ANON.png,1,images/22427705_d713ef5849f98b6c_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22427728,2,2,,X,,,micros,,CANCER,,,22427728_d713ef5849f98b6c_MG_R_ML_ANON.png,1,images/22427728_d713ef5849f98b6c_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22427751,2,5,X,X,,,nódulo + micros,,CANCER,,,22427751_d713ef5849f98b6c_MG_L_ML_ANON.png,1,images/22427751_d713ef5849f98b6c_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,22613624,2,2,,X,,,tres micros,,CANCER,   ,,22613624_dcafa6ba6374ec07_MG_R_CC_ANON.png,1,images/22613624_dcafa6ba6374ec07_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22613650,2,6,X,X,,,nódulo + micros,,CANCER,,,22613650_dcafa6ba6374ec07_MG_L_CC_ANON.png,1,images/22613650_dcafa6ba6374ec07_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22613676,2,2,,X,,,duas micros,,CANCER,,,22613676_dcafa6ba6374ec07_MG_R_ML_ANON.png,1,images/22613676_dcafa6ba6374ec07_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22613702,2,6,X,X,,,nódulo + micros,,CANCER,,,22613702_dcafa6ba6374ec07_MG_L_ML_ANON.png,1,images/22613702_dcafa6ba6374ec07_MG_L_ML_ANON.png
+removed,removed,L,MLO,200901,24055274,2,5,X,X,,,nódulo mama + micros;Spiculated Region,,CANCER,,,24055274_1e10aef17c9fe149_MG_L_ML_ANON.png,1,images/24055274_1e10aef17c9fe149_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24055328,2,3,,X,,,micros,,CANCER,,,24055328_1e10aef17c9fe149_MG_R_ML_ANON.png,1,images/24055328_1e10aef17c9fe149_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24055355,2,5,X,X,,,nódulo mama + micros;Spiculated Region,,CANCER,,,24055355_1e10aef17c9fe149_MG_L_CC_ANON.png,1,images/24055355_1e10aef17c9fe149_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,24055382,2,3,,X,,,micros,,CANCER,,,24055382_1e10aef17c9fe149_MG_R_CC_ANON.png,1,images/24055382_1e10aef17c9fe149_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53586361,1,1,,,,,normal follow up,,NO ANNOTATION (NORMAL),without muscle,,53586361_dda3c6969a34ff8e_MG_L_ML_ANON.png,0,images/53586361_dda3c6969a34ff8e_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53586388,1,1,,,,,normal follow up,,NO ANNOTATION (NORMAL),,,53586388_dda3c6969a34ff8e_MG_R_ML_ANON.png,0,images/53586388_dda3c6969a34ff8e_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53586415,1,1,,,,,normal follow up,,NO ANNOTATION (NORMAL),,,53586415_dda3c6969a34ff8e_MG_L_CC_ANON.png,0,images/53586415_dda3c6969a34ff8e_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53586442,1,1,,,,,normal follow up,,NO ANNOTATION (NORMAL),,,53586442_dda3c6969a34ff8e_MG_R_CC_ANON.png,0,images/53586442_dda3c6969a34ff8e_MG_R_CC_ANON.png
+removed,removed,R,CC,200901,30011647,1,2,,X,,,micros,,CANCER,,,30011647_6968748e66837bc7_MG_R_CC_ANON.png,1,images/30011647_6968748e66837bc7_MG_R_CC_ANON.png
+removed,removed,L,CC,200901,30011674,1,5,X,X,,,Nódulo + micros,,CANCER,,,30011674_6968748e66837bc7_MG_L_CC_ANON.png,1,images/30011674_6968748e66837bc7_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,30011700,1,2,,X,,,micros,,CANCER,,,30011700_6968748e66837bc7_MG_R_ML_ANON.png,1,images/30011700_6968748e66837bc7_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,30011727,1,5,X,X,,,Nódulo +micros,,CANCER,,,30011727_6968748e66837bc7_MG_L_ML_ANON.png,1,images/30011727_6968748e66837bc7_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,53581860,2,1,,,,,normal - follow up - artefacto,,NO ANNOTATION (NORMAL),,Artifact not annotated,53581860_21e6cc12630e5e9f_MG_L_ML_ANON.png,0,images/53581860_21e6cc12630e5e9f_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53581887,2,2,,X,,,micro,,CANCER,,,53581887_21e6cc12630e5e9f_MG_R_ML_ANON.png,1,images/53581887_21e6cc12630e5e9f_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53581914,2,1,,,,,normal - follow up,,NO ANNOTATION (NORMAL),,,53581914_21e6cc12630e5e9f_MG_L_CC_ANON.png,0,images/53581914_21e6cc12630e5e9f_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53581941,2,2,,X,,,micro,,CANCER,,,53581941_21e6cc12630e5e9f_MG_R_CC_ANON.png,1,images/53581941_21e6cc12630e5e9f_MG_R_CC_ANON.png
+removed,removed,R,MLO,200902,20588138,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,20588138_8d0b9620c53c0268_MG_R_ML_ANON.png,0,images/20588138_8d0b9620c53c0268_MG_R_ML_ANON.png
+removed,removed,R,CC,200902,20588164,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,20588164_8d0b9620c53c0268_MG_R_CC_ANON.png,0,images/20588164_8d0b9620c53c0268_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,20588190,2,4b,X,,,,nodulo ,,CANCER,,,20588190_8d0b9620c53c0268_MG_L_CC_ANON.png,1,images/20588190_8d0b9620c53c0268_MG_L_CC_ANON.png
+removed,removed,L,MLO,200902,20588216,2,4b,X,,,,nodulo ,,CANCER,,,20588216_8d0b9620c53c0268_MG_L_ML_ANON.png,1,images/20588216_8d0b9620c53c0268_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,50996945,1,2,,X,,,microS,,CANCER,,,50996945_ce5e5e18a261cd29_MG_L_ML_ANON.png,1,images/50996945_ce5e5e18a261cd29_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50996972,1,2,,X,,,follow up - calcificações,,CANCER,,,50996972_ce5e5e18a261cd29_MG_R_ML_ANON.png,1,images/50996972_ce5e5e18a261cd29_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50996999,1,2,,X,,,micros,,CANCER,,,50996999_ce5e5e18a261cd29_MG_L_CC_ANON.png,1,images/50996999_ce5e5e18a261cd29_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50997026,1,2,,X,,,follow up - calcificações ,,CANCER,,,50997026_ce5e5e18a261cd29_MG_R_CC_ANON.png,1,images/50997026_ce5e5e18a261cd29_MG_R_CC_ANON.png
+removed,removed,L,CC,200901,50997053,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50997053_ce5e5e18a261cd29_MG_L_CC_ANON.png,0,images/50997053_ce5e5e18a261cd29_MG_L_CC_ANON.png
+removed,removed,L,MLO,200901,50997080,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50997080_ce5e5e18a261cd29_MG_L_ML_ANON.png,0,images/50997080_ce5e5e18a261cd29_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,50997107,1,2,,X,,,micros - follow up,,CANCER,,,50997107_ce5e5e18a261cd29_MG_R_ML_ANON.png,1,images/50997107_ce5e5e18a261cd29_MG_R_ML_ANON.png
+removed,removed,R,CC,200901,50997134,1,2,,X,,,micros - follow up,,CANCER,,,50997134_ce5e5e18a261cd29_MG_R_CC_ANON.png,1,images/50997134_ce5e5e18a261cd29_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,20587758,3,3,X,,,,nódulo QSE,,CANCER,,,20587758_81cd83d2f4d78528_MG_L_CC_ANON.png,1,images/20587758_81cd83d2f4d78528_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,20587784,3,3,,X,,,Duas micros,,CANCER,,,20587784_81cd83d2f4d78528_MG_R_ML_ANON.png,1,images/20587784_81cd83d2f4d78528_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,20587810,3,3,X,,,,nódulo QSE ,,CANCER,,,20587810_81cd83d2f4d78528_MG_L_ML_ANON.png,1,images/20587810_81cd83d2f4d78528_MG_L_ML_ANON.png
+removed,removed,R,CC,200902,20587836,3,3,,X,,,micro,,CANCER,,,20587836_81cd83d2f4d78528_MG_R_CC_ANON.png,1,images/20587836_81cd83d2f4d78528_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50996056,1,2,,X,,,micros,,CANCER,,,50996056_71c1a60d57c5322f_MG_L_ML_ANON.png,1,images/50996056_71c1a60d57c5322f_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50996083,1,2,,X,,,micros,,CANCER,,,50996083_71c1a60d57c5322f_MG_R_ML_ANON.png,1,images/50996083_71c1a60d57c5322f_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50996110,1,2,,X,,,micros,,CANCER,,,50996110_71c1a60d57c5322f_MG_L_CC_ANON.png,1,images/50996110_71c1a60d57c5322f_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50996137,1,2,,X,,,micros,,CANCER,,,50996137_71c1a60d57c5322f_MG_R_CC_ANON.png,1,images/50996137_71c1a60d57c5322f_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53582395,1,1,,,,,normal - follow up,,NO ANNOTATION (NORMAL),,,53582395_3f0db31711fc9795_MG_L_ML_ANON.png,0,images/53582395_3f0db31711fc9795_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53582422,1,2,,X,,,micro - exame follow up,,CANCER,,,53582422_3f0db31711fc9795_MG_R_ML_ANON.png,1,images/53582422_3f0db31711fc9795_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53582449,1,1,,,,,normal - follow up,,NO ANNOTATION (NORMAL),,,53582449_3f0db31711fc9795_MG_L_CC_ANON.png,0,images/53582449_3f0db31711fc9795_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53582476,1,2,,X,,,micro - exame follow up,,CANCER,,,53582476_3f0db31711fc9795_MG_R_CC_ANON.png,1,images/53582476_3f0db31711fc9795_MG_R_CC_ANON.png
+removed,removed,L,MLO,200902,50999094,2,2,,X,,,micros,,CANCER,without muscle,,50999094_cb65e8dac169f596_MG_L_ML_ANON.png,1,images/50999094_cb65e8dac169f596_MG_L_ML_ANON.png
+removed,removed,R,MLO,200902,50999121,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50999121_cb65e8dac169f596_MG_R_ML_ANON.png,0,images/50999121_cb65e8dac169f596_MG_R_ML_ANON.png
+removed,removed,L,CC,200902,50999148,2,2,,X,,,micros,,CANCER,,,50999148_cb65e8dac169f596_MG_L_CC_ANON.png,1,images/50999148_cb65e8dac169f596_MG_L_CC_ANON.png
+removed,removed,R,CC,200902,50999175,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50999175_cb65e8dac169f596_MG_R_CC_ANON.png,0,images/50999175_cb65e8dac169f596_MG_R_CC_ANON.png
+removed,removed,L,MLO,200901,50999246,2,2,,X,,,micros,,CANCER,,,50999246_cb65e8dac169f596_MG_L_ML_ANON.png,1,images/50999246_cb65e8dac169f596_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,50999273,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50999273_cb65e8dac169f596_MG_R_ML_ANON.png,0,images/50999273_cb65e8dac169f596_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,50999300,2,2,,X,,,micros,,CANCER,,,50999300_cb65e8dac169f596_MG_L_CC_ANON.png,1,images/50999300_cb65e8dac169f596_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,50999327,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50999327_cb65e8dac169f596_MG_R_CC_ANON.png,0,images/50999327_cb65e8dac169f596_MG_R_CC_ANON.png
+removed,removed,R,MLO,201001,50994535,2,2,,X,,,micros,,CANCER,,,50994535_de4c34099d6ef8de_MG_R_ML_ANON.png,1,images/50994535_de4c34099d6ef8de_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,50994562,2,2,,X,,,micros,,CANCER,,,50994562_de4c34099d6ef8de_MG_R_CC_ANON.png,1,images/50994562_de4c34099d6ef8de_MG_R_CC_ANON.png
+removed,removed,R,MLO,200901,50994589,2,2,,X,,,micros,,CANCER,,,50994589_de4c34099d6ef8de_MG_R_ML_ANON.png,1,images/50994589_de4c34099d6ef8de_MG_R_ML_ANON.png
+removed,removed,R,CC,200901,50994616,2,2,,X,,,micros,,CANCER,,,50994616_de4c34099d6ef8de_MG_R_CC_ANON.png,1,images/50994616_de4c34099d6ef8de_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22427840,2,5,X,X,,,nódulo + micros,,CANCER,,,22427840_bbd6a3a35438c11b_MG_R_CC_ANON.png,1,images/22427840_bbd6a3a35438c11b_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22427864,2,2,,X,,,micro,,CANCER,,,22427864_bbd6a3a35438c11b_MG_L_CC_ANON.png,1,images/22427864_bbd6a3a35438c11b_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22579730,2,5,X,X,,,2 nódulos + micros,,CANCER,,,22579730_bbd6a3a35438c11b_MG_R_ML_ANON.png,1,images/22579730_bbd6a3a35438c11b_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22579754,2,2,,X,,,micros,,CANCER,,,22579754_bbd6a3a35438c11b_MG_L_ML_ANON.png,1,images/22579754_bbd6a3a35438c11b_MG_L_ML_ANON.png
+removed,removed,R,CC,200901,30011798,2,2,,X,,,follow-up com micros,,CANCER,,,30011798_4f20c1285d8f0b1f_MG_R_CC_ANON.png,1,images/30011798_4f20c1285d8f0b1f_MG_R_CC_ANON.png
+removed,removed,L,CC,200901,30011824,2,4b,,X,,,micros;Cluster,,CANCER,,,30011824_4f20c1285d8f0b1f_MG_L_CC_ANON.png,1,images/30011824_4f20c1285d8f0b1f_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,30011850,2,2,,X,,,follow up com micros,,CANCER,,,30011850_4f20c1285d8f0b1f_MG_R_ML_ANON.png,1,images/30011850_4f20c1285d8f0b1f_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,30318067,2,4b,,X,,,micros;Cluster,,CANCER,,,30318067_4f20c1285d8f0b1f_MG_L_ML_ANON.png,1,images/30318067_4f20c1285d8f0b1f_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50996709,2,2,,X,,,micros,,CANCER,,,50996709_330e5fe16929eed4_MG_R_ML_ANON.png,1,images/50996709_330e5fe16929eed4_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,50996736,2,2,,X,,,micros,,CANCER,,,50996736_330e5fe16929eed4_MG_R_CC_ANON.png,1,images/50996736_330e5fe16929eed4_MG_R_CC_ANON.png
+removed,removed,L,MLO,200902,51049053,3,2,X,X,,,opacidade nodular + calcificação,,CANCER,,,51049053_8c105bb715bf1c3c_MG_L_ML_ANON.png,1,images/51049053_8c105bb715bf1c3c_MG_L_ML_ANON.png
+removed,removed,R,MLO,200902,51049080,3,2,,X,,,micros,,CANCER,,,51049080_8c105bb715bf1c3c_MG_R_ML_ANON.png,1,images/51049080_8c105bb715bf1c3c_MG_R_ML_ANON.png
+removed,removed,L,CC,200902,51049107,3,2,X,X,,,3 opacidades nodulares  + calcificações,,CANCER,,,51049107_8c105bb715bf1c3c_MG_L_CC_ANON.png,1,images/51049107_8c105bb715bf1c3c_MG_L_CC_ANON.png
+removed,removed,R,CC,200902,51049134,3,2,,X,,,micros,,CANCER,,,51049134_8c105bb715bf1c3c_MG_R_CC_ANON.png,1,images/51049134_8c105bb715bf1c3c_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22614236,2,5,X,X,,,nódulo + micros,,CANCER,,,22614236_1e5c3af078f74b05_MG_L_CC_ANON.png,1,images/22614236_1e5c3af078f74b05_MG_L_CC_ANON.png
+removed,removed,L,MLO,201001,22614266,2,5,X,X,,,nódulo + micros,,CANCER,,,22614266_1e5c3af078f74b05_MG_L_ML_ANON.png,1,images/22614266_1e5c3af078f74b05_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,50994706,3,1,,,,,normal - follow up - artefacto,,NO ANNOTATION (NORMAL),,Artifact no annotated,50994706_069212ec65a94339_MG_R_CC_ANON.png,0,images/50994706_069212ec65a94339_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50994733,3,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50994733_069212ec65a94339_MG_L_ML_ANON.png,0,images/50994733_069212ec65a94339_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50994760,3,1,,,,,normal - follow up - artefacto,,NO ANNOTATION (NORMAL),,Artifact no annotated,50994760_069212ec65a94339_MG_R_ML_ANON.png,0,images/50994760_069212ec65a94339_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50994787,3,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50994787_069212ec65a94339_MG_L_CC_ANON.png,0,images/50994787_069212ec65a94339_MG_L_CC_ANON.png
+removed,removed,L,MLO,200901,50994814,3,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50994814_069212ec65a94339_MG_L_ML_ANON.png,0,images/50994814_069212ec65a94339_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,50994841,3,4c,,X,,,micros,,CANCER,,,50994841_069212ec65a94339_MG_R_ML_ANON.png,1,images/50994841_069212ec65a94339_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,50994868,3,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50994868_069212ec65a94339_MG_L_CC_ANON.png,0,images/50994868_069212ec65a94339_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,50994895,3,4c,,X,,,micros,,CANCER,,,50994895_069212ec65a94339_MG_R_CC_ANON.png,1,images/50994895_069212ec65a94339_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53586724,1,2,,X,,,micros - exame follow up,,CANCER,,,53586724_e5f3f68b9ce31228_MG_L_ML_ANON.png,1,images/53586724_e5f3f68b9ce31228_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53586751,1,2,,X,,,micros - exame follow up - artefacto,,CANCER,,Artifact not annotated,53586751_e5f3f68b9ce31228_MG_R_ML_ANON.png,1,images/53586751_e5f3f68b9ce31228_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53586778,1,2,,X,,,micros - exame follow up,,CANCER,,,53586778_e5f3f68b9ce31228_MG_L_CC_ANON.png,1,images/53586778_e5f3f68b9ce31228_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53586805,1,2,,X,,,micros - exame follow up - artefacto,,CANCER,,Artifact not annotated,53586805_e5f3f68b9ce31228_MG_R_CC_ANON.png,1,images/53586805_e5f3f68b9ce31228_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22614499,3,2,,X,,,micros,,CANCER,,,22614499_2dec4948fbe6336d_MG_R_CC_ANON.png,1,images/22614499_2dec4948fbe6336d_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22614522,3,4a,X,X,,,nódulo QSE + micros,,CANCER,,,22614522_2dec4948fbe6336d_MG_L_CC_ANON.png,1,images/22614522_2dec4948fbe6336d_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22614545,3,2,,X,,,micros,,CANCER,,,22614545_2dec4948fbe6336d_MG_R_ML_ANON.png,1,images/22614545_2dec4948fbe6336d_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22614568,3,4a,X,X,,,nódulo QSE + micros,,CANCER,,,22614568_2dec4948fbe6336d_MG_L_ML_ANON.png,1,images/22614568_2dec4948fbe6336d_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,51049249,2,2,,X,,,micros,,CANCER,,,51049249_832ebce700241036_MG_L_CC_ANON.png,1,images/51049249_832ebce700241036_MG_L_CC_ANON.png
+removed,removed,L,MLO,201001,51049276,2,2,,X,,,micros,,CANCER,,,51049276_832ebce700241036_MG_L_ML_ANON.png,1,images/51049276_832ebce700241036_MG_L_ML_ANON.png
+removed,removed,R,CC,200902,24058660,1,2,,X,,X,densidade assimétrica mama esquerda + micros,,CANCER,,,24058660_9e8db9e34d5275ef_MG_R_CC_ANON.png,1,images/24058660_9e8db9e34d5275ef_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,24058686,1,4a,,,,X,densidade assimétrica mama esquerda + micros,,CANCER,,,24058686_9e8db9e34d5275ef_MG_L_CC_ANON.png,1,images/24058686_9e8db9e34d5275ef_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,24058712,1,2,,X,,X,densidade assimétrica mama esquerda + micros,,CANCER,,,24058712_9e8db9e34d5275ef_MG_R_ML_ANON.png,1,images/24058712_9e8db9e34d5275ef_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,24058738,1,4a,,,,X,densidade assimétrica mama esquerda + micros,,CANCER,,,24058738_9e8db9e34d5275ef_MG_L_ML_ANON.png,1,images/24058738_9e8db9e34d5275ef_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,22613918,2,4a,,X,,,micros + Cluster,,CANCER,,,22613918_f23fa352e7de3dc7_MG_R_CC_ANON.png,1,images/22613918_f23fa352e7de3dc7_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22613944,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22613944_f23fa352e7de3dc7_MG_L_CC_ANON.png,0,images/22613944_f23fa352e7de3dc7_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22613970,2,4a,,X,,,micros + Cluster,,CANCER,,,22613970_f23fa352e7de3dc7_MG_R_ML_ANON.png,1,images/22613970_f23fa352e7de3dc7_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22613996,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22613996_f23fa352e7de3dc7_MG_L_ML_ANON.png,0,images/22613996_f23fa352e7de3dc7_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,53580804,2,5,X,X,,,nódulo QIE + micros,,CANCER,,,53580804_51bec6477a7898b9_MG_L_ML_ANON.png,1,images/53580804_51bec6477a7898b9_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53580831,2,2,,X,,,micros,,CANCER,,,53580831_51bec6477a7898b9_MG_R_ML_ANON.png,1,images/53580831_51bec6477a7898b9_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53580858,2,5,X,X,,,nódulo QIE + micros,,CANCER,,,53580858_51bec6477a7898b9_MG_L_CC_ANON.png,1,images/53580858_51bec6477a7898b9_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53580885,2,2,,X,,,micros,,CANCER,,,53580885_51bec6477a7898b9_MG_R_CC_ANON.png,1,images/53580885_51bec6477a7898b9_MG_R_CC_ANON.png
+removed,removed,R,CC,200902,20587612,1,5,X,X,,,nódulo direita + micros,,SPICULATED REGION,,,20587612_f4b2d377f43ba0bd_MG_R_CC_ANON.png,1,images/20587612_f4b2d377f43ba0bd_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,20587638,1,2,,X,,,micros,,CANCER,,,20587638_f4b2d377f43ba0bd_MG_L_CC_ANON.png,1,images/20587638_f4b2d377f43ba0bd_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,20587664,1,5,X,X,,,nódulo direita + micros,,CANCER,,,20587664_f4b2d377f43ba0bd_MG_R_ML_ANON.png,1,images/20587664_f4b2d377f43ba0bd_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,20587690,1,2,,X,,,micros,,CANCER,,,20587690_f4b2d377f43ba0bd_MG_L_ML_ANON.png,1,images/20587690_f4b2d377f43ba0bd_MG_L_ML_ANON.png
+removed,removed,L,MLO,200901,24065380,2,2,,,,X,densidade assimetrica TQS ,,CANCER,,,24065380_83db89f57aea498a_MG_L_ML_ANON.png,1,images/24065380_83db89f57aea498a_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24065407,2,4c,,,,X,densidade assimetrica TQS,,CANCER,,,24065407_83db89f57aea498a_MG_R_ML_ANON.png,1,images/24065407_83db89f57aea498a_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24065434,2,2,,,,X,densidade assimetrica TQS,,CANCER,,,24065434_83db89f57aea498a_MG_L_CC_ANON.png,1,images/24065434_83db89f57aea498a_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,24065461,2,4c,,,,X,densidade assimetrica TQS ,,CANCER,,,24065461_83db89f57aea498a_MG_R_CC_ANON.png,1,images/24065461_83db89f57aea498a_MG_R_CC_ANON.png
+removed,removed,R,MLO,201001,53581237,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581237_80123a24997098dc_MG_R_ML_ANON.png,0,images/53581237_80123a24997098dc_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,53581264,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581264_80123a24997098dc_MG_R_CC_ANON.png,0,images/53581264_80123a24997098dc_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22670094,1,6,X,X,,,nódulo (pós QT)+ micro1, ,SPICULATED REGION,,,22670094_e1f51192f7bf3f5f_MG_R_CC_ANON.png,1,images/22670094_e1f51192f7bf3f5f_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22670124,1,2,,X,,,micros,,CANCER,,,22670124_e1f51192f7bf3f5f_MG_L_CC_ANON.png,1,images/22670124_e1f51192f7bf3f5f_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22670147,1,6,X,X,,,nódulo( pós QT) + 1micro,,CANCER,,,22670147_e1f51192f7bf3f5f_MG_R_ML_ANON.png,1,images/22670147_e1f51192f7bf3f5f_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22670177,1,2,,X,,,micros,,CANCER,,,22670177_e1f51192f7bf3f5f_MG_L_ML_ANON.png,1,images/22670177_e1f51192f7bf3f5f_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,50993616,2,2,,X,,,micros,,CANCER,,,50993616_b03f1dd34eb3c55f_MG_L_ML_ANON.png,1,images/50993616_b03f1dd34eb3c55f_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,50993643,2,2,,X,,,micros,,CANCER,,,50993643_b03f1dd34eb3c55f_MG_L_CC_ANON.png,1,images/50993643_b03f1dd34eb3c55f_MG_L_CC_ANON.png
+removed,removed,L,MLO,200802,50993670,2,2,,X,,,micros,,CANCER,,,50993670_b03f1dd34eb3c55f_MG_L_ML_ANON.png,1,images/50993670_b03f1dd34eb3c55f_MG_L_ML_ANON.png
+removed,removed,L,CC,200802,50993697,2,2,,X,,,micros,,CANCER,,,50993697_b03f1dd34eb3c55f_MG_L_CC_ANON.png,1,images/50993697_b03f1dd34eb3c55f_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,20587148,2,2,,X,,,calcificações,,CANCER,,,20587148_fd746d25eb40b3dc_MG_R_CC_ANON.png,1,images/20587148_fd746d25eb40b3dc_MG_R_CC_ANON.png
+removed,removed,L,CC,200901,20587174,2,2,,X,,,follow up - calcificações,,CANCER,,,20587174_fd746d25eb40b3dc_MG_L_CC_ANON.png,1,images/20587174_fd746d25eb40b3dc_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,20587200,2,2,,X,,,calcificações,,CANCER,,,20587200_fd746d25eb40b3dc_MG_R_ML_ANON.png,1,images/20587200_fd746d25eb40b3dc_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,20587226,2,2,,X,,,follow up - calcificações,,CANCER,,,20587226_fd746d25eb40b3dc_MG_L_ML_ANON.png,1,images/20587226_fd746d25eb40b3dc_MG_L_ML_ANON.png
+removed,removed,R,CC,200902,22580492,3,2,,X,,X,densidade assimetrica QSE à esquerda,,CANCER,,,22580492_2a5b932da4ce5ca1_MG_R_CC_ANON.png,1,images/22580492_2a5b932da4ce5ca1_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,22580520,3,5,,X,,X,densidade assimetrica QSE à esquerda,,CANCER,,,22580520_2a5b932da4ce5ca1_MG_L_CC_ANON.png,1,images/22580520_2a5b932da4ce5ca1_MG_L_CC_ANON.png
+removed,removed,R,MLO,200902,22580548,3,2,,X,,X,densidade assimetrica QSE à esquerda,,CANCER,,,22580548_2a5b932da4ce5ca1_MG_R_ML_ANON.png,1,images/22580548_2a5b932da4ce5ca1_MG_R_ML_ANON.png
+removed,removed,L,MLO,200902,22580576,3,5,,X,,X,densidade assimetrica QSE à esquerda,,CANCER,,,22580576_2a5b932da4ce5ca1_MG_L_ML_ANON.png,1,images/22580576_2a5b932da4ce5ca1_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,22579847,3,2,,X,,,micros,,CANCER,,,22579847_301f1776aebbf5d2_MG_R_CC_ANON.png,1,images/22579847_301f1776aebbf5d2_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22579870,3,4c,,X,,,micros +calcifications+ Cluster,,CANCER,,,22579870_301f1776aebbf5d2_MG_L_CC_ANON.png,1,images/22579870_301f1776aebbf5d2_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22579893,3,2,,X,,,micros,,CANCER,,,22579893_301f1776aebbf5d2_MG_R_ML_ANON.png,1,images/22579893_301f1776aebbf5d2_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22579916,3,4c,,X,,,micros + calcifications+ Cluster,,CANCER,,,22579916_301f1776aebbf5d2_MG_L_ML_ANON.png,1,images/22579916_301f1776aebbf5d2_MG_L_ML_ANON.png
+removed,removed,L,MLO,201001,53582656,2,5,X,X,,,massa + calcificações,,CANCER,,,53582656_465aa5ec1b59efc6_MG_L_ML_ANON.png,1,images/53582656_465aa5ec1b59efc6_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,53582683,2,5,X,X,,,massa + calcificações,,CANCER,,,53582683_465aa5ec1b59efc6_MG_L_CC_ANON.png,1,images/53582683_465aa5ec1b59efc6_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,53582710,2,2,,X,,,calcificações,,CANCER,,,53582710_465aa5ec1b59efc6_MG_R_ML_ANON.png,1,images/53582710_465aa5ec1b59efc6_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,53582737,2,2,,X,,,calcificações cirurgia,,CANCER,,,53582737_465aa5ec1b59efc6_MG_L_ML_ANON.png,1,images/53582737_465aa5ec1b59efc6_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,53582764,2,2,,X,,,calcificações ,,CANCER,,,53582764_465aa5ec1b59efc6_MG_R_ML_ANON.png,1,images/53582764_465aa5ec1b59efc6_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,53582791,2,2,,X,,,calcificações cirurgia,,CANCER,,,53582791_465aa5ec1b59efc6_MG_L_CC_ANON.png,1,images/53582791_465aa5ec1b59efc6_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,53582818,2,2,,X,,,calcificações,,CANCER,,,53582818_465aa5ec1b59efc6_MG_R_CC_ANON.png,1,images/53582818_465aa5ec1b59efc6_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22670978,4,4b,,X,,,micros TQS e QSE ; Cluster,,CANCER,,,22670978_f571fd4e63c718e3_MG_L_CC_ANON.png,1,images/22670978_f571fd4e63c718e3_MG_L_CC_ANON.png
+removed,removed,L,MLO,201001,22671003,4,4b,,X,,,micros TQS e QSE ; Cluster,,CANCER,,,22671003_f571fd4e63c718e3_MG_L_ML_ANON.png,1,images/22671003_f571fd4e63c718e3_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53582304,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53582304_8913a7e0cf3bd74e_MG_R_ML_ANON.png,0,images/53582304_8913a7e0cf3bd74e_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,53582331,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53582331_8913a7e0cf3bd74e_MG_R_CC_ANON.png,0,images/53582331_8913a7e0cf3bd74e_MG_R_CC_ANON.png
+removed,removed,R,CC,200902,20586908,2,2,X,X,,,nodulo mama direita + micros,,CANCER,,,20586908_6c613a14b80a8591_MG_R_CC_ANON.png,1,images/20586908_6c613a14b80a8591_MG_R_CC_ANON.png
+removed,removed,L,CC,200902,20586934,2,5,X,X,,,nodulo esquerda + micros,,SPICULATED REGION,,11mm a parte mais densa,20586934_6c613a14b80a8591_MG_L_CC_ANON.png,1,images/20586934_6c613a14b80a8591_MG_L_CC_ANON.png
+removed,removed,L,MLO,200902,20586986,2,5,X,X,,,nodulo mama esquerda + micros,,SPICULATED REGION,,,20586986_6c613a14b80a8591_MG_L_ML_ANON.png,1,images/20586986_6c613a14b80a8591_MG_L_ML_ANON.png
+removed,removed,R,MLO,200902,20586960,2,2,X,X,,,2nodulos mama direita + micros,,CANCER,,,20586960_6c613a14b80a8591_MG_R_ML_ANON.png,1,images/20586960_6c613a14b80a8591_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,53587663,1,2,X,X,,,cc direita - calcificações + nodulo benigno - follow up,,CANCER,,,53587663_5fb370d4c1c71974_MG_R_CC_ANON.png,1,images/53587663_5fb370d4c1c71974_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53587690,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53587690_5fb370d4c1c71974_MG_L_ML_ANON.png,0,images/53587690_5fb370d4c1c71974_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53587717,1,2,,X,,,calcificações - follow up,,CANCER,,,53587717_5fb370d4c1c71974_MG_R_ML_ANON.png,1,images/53587717_5fb370d4c1c71974_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53587744,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53587744_5fb370d4c1c71974_MG_L_CC_ANON.png,0,images/53587744_5fb370d4c1c71974_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,50998981,2,5,X,X,,,nódulo QSE + micros,,CANCER,,,50998981_a78eba834ef6ee88_MG_R_ML_ANON.png,1,images/50998981_a78eba834ef6ee88_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,50999008,2,5,X,X,,,nódulo QSE + micros,,CANCER,,,50999008_a78eba834ef6ee88_MG_R_CC_ANON.png,1,images/50999008_a78eba834ef6ee88_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53586869,1,2,X,X,,,"nódulo QII, benigno + micros",,CANCER,,,53586869_6ac23356b912ee9b_MG_L_ML_ANON.png,1,images/53586869_6ac23356b912ee9b_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,53586896,1,2,X,X,,,"nódulo QII, benigno + micros",,CANCER,,,53586896_6ac23356b912ee9b_MG_L_CC_ANON.png,1,images/53586896_6ac23356b912ee9b_MG_L_CC_ANON.png
+removed,removed,L,MLO,200901,24054997,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,24054997_2f1104b3cda7f145_MG_L_ML_ANON.png,0,images/24054997_2f1104b3cda7f145_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,24055024,2,2,,X,,,micros,,CANCER,,,24055024_2f1104b3cda7f145_MG_R_ML_ANON.png,1,images/24055024_2f1104b3cda7f145_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,24055051,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,24055051_2f1104b3cda7f145_MG_L_CC_ANON.png,0,images/24055051_2f1104b3cda7f145_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,24055078,2,2,,X,,,micro,,CANCER,,,24055078_2f1104b3cda7f145_MG_R_CC_ANON.png,1,images/24055078_2f1104b3cda7f145_MG_R_CC_ANON.png
+removed,removed,R,CC,200902,20587054,2,4c,,X,,,micros;Cluster,,CANCER,,,20587054_b6a4f750c6df4f90_MG_R_CC_ANON.png,1,images/20587054_b6a4f750c6df4f90_MG_R_CC_ANON.png
+removed,removed,R,MLO,200902,20587080,2,4c,,X,,,micros;Cluster,,CANCER,,,20587080_b6a4f750c6df4f90_MG_R_ML_ANON.png,1,images/20587080_b6a4f750c6df4f90_MG_R_ML_ANON.png
+removed,removed,L,MLO,200801,24065251,2,5,X,X,,,nódulo + micros QSE ,,CANCER,,,24065251_c4b995eddb3c510c_MG_L_ML_ANON.png,1,images/24065251_c4b995eddb3c510c_MG_L_ML_ANON.png
+removed,removed,R,MLO,200801,24065270,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,24065270_c4b995eddb3c510c_MG_R_ML_ANON.png,0,images/24065270_c4b995eddb3c510c_MG_R_ML_ANON.png
+removed,removed,L,CC,200801,24065289,2,5,X,X,,,nódulo + micros QSE ,,CANCER,,,24065289_c4b995eddb3c510c_MG_L_CC_ANON.png,1,images/24065289_c4b995eddb3c510c_MG_L_CC_ANON.png
+removed,removed,R,CC,200801,24065308,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,24065308_c4b995eddb3c510c_MG_R_CC_ANON.png,0,images/24065308_c4b995eddb3c510c_MG_R_CC_ANON.png
+removed,removed,R,MLO,201001,50998322,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50998322_1e4b534393d18753_MG_R_ML_ANON.png,0,images/50998322_1e4b534393d18753_MG_R_ML_ANON.png
+removed,removed,R,CC,201001,50998349,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50998349_1e4b534393d18753_MG_R_CC_ANON.png,0,images/50998349_1e4b534393d18753_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50996325,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50996325_6aba0b402889a16f_MG_L_ML_ANON.png,0,images/50996325_6aba0b402889a16f_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50996352,1,4c,X,,,,nodulo ,,CANCER,,,50996352_6aba0b402889a16f_MG_R_ML_ANON.png,1,images/50996352_6aba0b402889a16f_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50996379,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50996379_6aba0b402889a16f_MG_L_CC_ANON.png,0,images/50996379_6aba0b402889a16f_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50996406,1,4c,X,,,,nodulo ,,CANCER,,,50996406_6aba0b402889a16f_MG_R_CC_ANON.png,1,images/50996406_6aba0b402889a16f_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50997597,1,2,,X,,,micros e calcificação vasos - follow up,,CANCER,,,50997597_67cc8c9939d74a9a_MG_L_ML_ANON.png,1,images/50997597_67cc8c9939d74a9a_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50997624,1,2,,X,,,micros - follow up,,CANCER,,,50997624_67cc8c9939d74a9a_MG_R_ML_ANON.png,1,images/50997624_67cc8c9939d74a9a_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50997651,1,2,,X,,,micros e calcificação vasos - follow up,,CANCER,,,50997651_67cc8c9939d74a9a_MG_L_CC_ANON.png,1,images/50997651_67cc8c9939d74a9a_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50997678,1,2,,X,,,micros - follow up,,CANCER,,,50997678_67cc8c9939d74a9a_MG_R_CC_ANON.png,1,images/50997678_67cc8c9939d74a9a_MG_R_CC_ANON.png
+removed,removed,L,MLO,200902,50995872,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50995872_c94d8a1ebd452afe_MG_L_ML_ANON.png,0,images/50995872_c94d8a1ebd452afe_MG_L_ML_ANON.png
+removed,removed,L,CC,200902,50995899,1,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50995899_c94d8a1ebd452afe_MG_L_CC_ANON.png,0,images/50995899_c94d8a1ebd452afe_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,22580654,1,5,X,X,,,Nódulo + 1 micro,,CANCER,,,22580654_fe7d005dcbbfb46d_MG_R_CC_ANON.png,1,images/22580654_fe7d005dcbbfb46d_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22580680,1,2,X,X,,,nodulo + duas micros,,CANCER,,,22580680_fe7d005dcbbfb46d_MG_L_CC_ANON.png,1,images/22580680_fe7d005dcbbfb46d_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22580706,1,5,X,X,,,Nódulo + 1micro,,CANCER,,,22580706_fe7d005dcbbfb46d_MG_R_ML_ANON.png,1,images/22580706_fe7d005dcbbfb46d_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22580732,1,2,X,X,,,nodulo + duas micros,,CANCER,,,22580732_fe7d005dcbbfb46d_MG_L_ML_ANON.png,1,images/22580732_fe7d005dcbbfb46d_MG_L_ML_ANON.png
+removed,removed,L,MLO,200902,50995963,1,2,,X,,,micros,,CANCER,,,50995963_d742ec2f9b90aa62_MG_L_ML_ANON.png,1,images/50995963_d742ec2f9b90aa62_MG_L_ML_ANON.png
+removed,removed,L,CC,200902,50995990,1,2,,X,,,micros,,CANCER,,,50995990_d742ec2f9b90aa62_MG_L_CC_ANON.png,1,images/50995990_d742ec2f9b90aa62_MG_L_CC_ANON.png
+removed,removed,R,MLO,200901,20588654,1,2,,X,,,micros,,CANCER,,,20588654_036aff49b8ac84f0_MG_R_ML_ANON.png,1,images/20588654_036aff49b8ac84f0_MG_R_ML_ANON.png
+removed,removed,L,MLO,200901,20588680,1,3,X,,,,nodulo,,CANCER,,,20588680_036aff49b8ac84f0_MG_L_ML_ANON.png,1,images/20588680_036aff49b8ac84f0_MG_L_ML_ANON.png
+removed,removed,L,MLO,200902,50994110,3,2,,X,,,micros,,CANCER,,,50994110_cc9e66c5b31baab8_MG_L_ML_ANON.png,1,images/50994110_cc9e66c5b31baab8_MG_L_ML_ANON.png
+removed,removed,R,MLO,200902,50994137,3,1,,,,,normal - follow up,,NO ANNOTATION (NORMAL),without muscle,,50994137_cc9e66c5b31baab8_MG_R_ML_ANON.png,0,images/50994137_cc9e66c5b31baab8_MG_R_ML_ANON.png
+removed,removed,L,CC,200902,50994164,3,2,,X,,,micros,,CANCER,,,50994164_cc9e66c5b31baab8_MG_L_CC_ANON.png,1,images/50994164_cc9e66c5b31baab8_MG_L_CC_ANON.png
+removed,removed,R,CC,200902,50994191,3,1,,,,,normal - follow up,,NO ANNOTATION (NORMAL),,,50994191_cc9e66c5b31baab8_MG_R_CC_ANON.png,0,images/50994191_cc9e66c5b31baab8_MG_R_CC_ANON.png
+removed,removed,R,CC,200901,50994273,3,4a,X,,,,nódulo ,,CANCER,,,50994273_cc9e66c5b31baab8_MG_R_CC_ANON.png,1,images/50994273_cc9e66c5b31baab8_MG_R_CC_ANON.png
+removed,removed,R,FB,200901,50994300,3,2,,X,,,1 micro,,CANCER,,,50994300_cc9e66c5b31baab8_MG_R_FB_ANON.png,1,images/50994300_cc9e66c5b31baab8_MG_R_FB_ANON.png
+removed,removed,L,MLO,200901,50994327,3,2,,X,,,micros,,CANCER,,,50994327_cc9e66c5b31baab8_MG_L_ML_ANON.png,1,images/50994327_cc9e66c5b31baab8_MG_L_ML_ANON.png
+removed,removed,R,MLO,200901,50994354,3,4a,X,,,,nódulo ,,CANCER,,,50994354_cc9e66c5b31baab8_MG_R_ML_ANON.png,1,images/50994354_cc9e66c5b31baab8_MG_R_ML_ANON.png
+removed,removed,L,CC,200901,50994381,3,2,,X,,,micros,,CANCER,,,50994381_cc9e66c5b31baab8_MG_L_CC_ANON.png,1,images/50994381_cc9e66c5b31baab8_MG_L_CC_ANON.png
+removed,removed,R,CC,200901,50994408,3,2,X,X,,,pequeno nodulo e micro,,CANCER,,,50994408_cc9e66c5b31baab8_MG_R_CC_ANON.png,1,images/50994408_cc9e66c5b31baab8_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,53581124,3,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581124_3be876aecfaad4ca_MG_L_ML_ANON.png,0,images/53581124_3be876aecfaad4ca_MG_L_ML_ANON.png
+removed,removed,L,CC,201001,53581151,3,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581151_3be876aecfaad4ca_MG_L_CC_ANON.png,0,images/53581151_3be876aecfaad4ca_MG_L_CC_ANON.png
+removed,removed,R,CC,200902,20587902,4,3,X,X,,,nódulo + uma micro,,CANCER,,,20587902_8dbbd4e51f549ff0_MG_R_CC_ANON.png,1,images/20587902_8dbbd4e51f549ff0_MG_R_CC_ANON.png
+removed,removed,R,MLO,200902,20587928,4,3,X,X,,,nódulo + uma micro,,CANCER,,,20587928_8dbbd4e51f549ff0_MG_R_ML_ANON.png,1,images/20587928_8dbbd4e51f549ff0_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,53580979,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53580979_4c341dad22471922_MG_L_ML_ANON.png,0,images/53580979_4c341dad22471922_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,53581006,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581006_4c341dad22471922_MG_R_ML_ANON.png,0,images/53581006_4c341dad22471922_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,53581033,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581033_4c341dad22471922_MG_L_CC_ANON.png,0,images/53581033_4c341dad22471922_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,53581060,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,53581060_4c341dad22471922_MG_R_CC_ANON.png,0,images/53581060_4c341dad22471922_MG_R_CC_ANON.png
+removed,removed,L,MLO,201001,50998580,2,2,,X,,,micros,,CANCER,,,50998580_cd12bc20b3d27d0b_MG_L_ML_ANON.png,1,images/50998580_cd12bc20b3d27d0b_MG_L_ML_ANON.png
+removed,removed,R,MLO,201001,50998607,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50998607_cd12bc20b3d27d0b_MG_R_ML_ANON.png,0,images/50998607_cd12bc20b3d27d0b_MG_R_ML_ANON.png
+removed,removed,L,CC,201001,50998634,2,2,,,X,,distorção do estroma QSE  - benigna + micros,,CANCER,,,50998634_cd12bc20b3d27d0b_MG_L_CC_ANON.png,1,images/50998634_cd12bc20b3d27d0b_MG_L_CC_ANON.png
+removed,removed,R,CC,201001,50998661,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,50998661_cd12bc20b3d27d0b_MG_R_CC_ANON.png,0,images/50998661_cd12bc20b3d27d0b_MG_R_CC_ANON.png
+removed,removed,R,CC,201001,22678449,1,2,,X,,,calcificações,,CANCER,,,22678449_60995d51033e24b8_MG_R_CC_ANON.png,1,images/22678449_60995d51033e24b8_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22678472,1,2,,X,,,calcificações,,CANCER,,,22678472_60995d51033e24b8_MG_L_CC_ANON.png,1,images/22678472_60995d51033e24b8_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22678495,1,2,,X,,,calcificações,,CANCER,,,22678495_60995d51033e24b8_MG_R_ML_ANON.png,1,images/22678495_60995d51033e24b8_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22678518,1,2,,X,,,calcificações,,CANCER,,,22678518_60995d51033e24b8_MG_L_ML_ANON.png,1,images/22678518_60995d51033e24b8_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,22580015,2,2,,X,,,micros ,,CANCER,,,22580015_6200187f3f1ccc18_MG_R_CC_ANON.png,1,images/22580015_6200187f3f1ccc18_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22580038,2,5,X,X,,,nódulo + microcalcificações ,,CANCER,,,22580038_6200187f3f1ccc18_MG_L_CC_ANON.png,1,images/22580038_6200187f3f1ccc18_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22580068,2,2,,X,,,micros,,CANCER,,,22580068_6200187f3f1ccc18_MG_R_ML_ANON.png,1,images/22580068_6200187f3f1ccc18_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22580098,2,5,X,X,,,nódulo + microcalcificações,,CANCER,,,22580098_6200187f3f1ccc18_MG_L_ML_ANON.png,1,images/22580098_6200187f3f1ccc18_MG_L_ML_ANON.png
+removed,removed,R,CC,201001,22613770,2,5,X,X,,,nódulo + microcalcificações,,CANCER,,,22613770_45c7f44839fd9e68_MG_R_CC_ANON.png,1,images/22613770_45c7f44839fd9e68_MG_R_CC_ANON.png
+removed,removed,L,CC,201001,22613796,2,2,,X,,,micros,,CANCER,,,22613796_45c7f44839fd9e68_MG_L_CC_ANON.png,1,images/22613796_45c7f44839fd9e68_MG_L_CC_ANON.png
+removed,removed,R,MLO,201001,22613822,2,5,X,X,,,nódulo + microcalcificações,,CANCER,,,22613822_45c7f44839fd9e68_MG_R_ML_ANON.png,1,images/22613822_45c7f44839fd9e68_MG_R_ML_ANON.png
+removed,removed,L,MLO,201001,22613848,2,1,,,,,normal,,NO ANNOTATION (NORMAL),,,22613848_45c7f44839fd9e68_MG_L_ML_ANON.png,0,images/22613848_45c7f44839fd9e68_MG_L_ML_ANON.png
+removed,removed,L,MLO,200802,24055725,4,2,,X,,,micros,,CANCER,,,24055725_f0f1a133837b5137_MG_L_ML_ANON.png,1,images/24055725_f0f1a133837b5137_MG_L_ML_ANON.png
+removed,removed,R,MLO,200802,24055752,4,2,,X,,,micros,,CANCER,,,24055752_f0f1a133837b5137_MG_R_ML_ANON.png,1,images/24055752_f0f1a133837b5137_MG_R_ML_ANON.png
+removed,removed,L,CC,200802,24055779,4,2,,X,,,micros,,CANCER,,,24055779_f0f1a133837b5137_MG_L_CC_ANON.png,1,images/24055779_f0f1a133837b5137_MG_L_CC_ANON.png
+removed,removed,R,CC,200802,24055806,4,2,,X,,,micros,,CANCER,,,24055806_f0f1a133837b5137_MG_R_CC_ANON.png,1,images/24055806_f0f1a133837b5137_MG_R_CC_ANON.png
