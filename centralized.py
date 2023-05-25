@@ -17,9 +17,7 @@ warnings.filterwarnings('ignore')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 cores = mp.cpu_count()
 c = color.clr()
-print(c.SUCCESS('Day:'), datetime.datetime.now())
-print(c.SUCCESS('Device:'), device)
-print(c.SUCCESS('Core:'), cores)
+
 
 def pre_process(img):
     img = img.astype(np.uint8)
@@ -132,14 +130,18 @@ def train(net, trainloader, testloader, epochs):
             lst_loss['val'].append(loss)
     return lst_loss, lst_acc
 
-def client(name_client):
+def transform_image():
     transform = transforms.Compose([transforms.ToTensor(),
                                     transforms.Normalize((0.5), (0.5)),
                                     transforms.RandomHorizontalFlip(),
                                     transforms.RandomVerticalFlip(),
                                     transforms.RandomRotation(30),
                                     transforms.Resize((227,227))])
-    train_loader, test_loader = Dataloader(path_data=f'dataset/{name_client.upper()}-ROI-Mammography', transform=transform, batch_size=32)
+    return transform
+def client(name_client):
+    
+    train_loader, test_loader = Dataloader(path_data=f'dataset/{name_client.upper()}-ROI-Mammography', \
+        transform=transform_image(), batch_size=32)
     # Training
     net = Net().to(device)
     # show
@@ -157,4 +159,14 @@ def client(name_client):
     plt.legend()
     plt.savefig(f'result/{name_client}.png')
 
-client('mias')
+if __name__ == '__main__':
+    print(c.TEXT_BOLD('MACHINE LEARNING ON CENTRALIZED DATA'))
+    print(c.SUCCESS('Day:'), datetime.datetime.now())
+    print(c.SUCCESS('Device:'), device)
+    print(c.SUCCESS('Core:'), cores)
+
+    # client('mias')
+    net = Net().to(device)
+    print(net)
+
+
