@@ -1,5 +1,7 @@
 import flwr as fl
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 import color
 c = color.clr()
 
@@ -28,9 +30,6 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
 
         avg_loss = total_loss / num_results
         avg_accuracy = total_accuracy / num_results
-        data['avg_loss'] = avg_loss
-        data['avg_accuracy'] = avg_accuracy
-        print(c.SUCCESS(f"Average loss: {avg_loss}, Average accuracy: {avg_accuracy}"))
         return avg_loss, avg_accuracy
     
     def aggregate_fit(
@@ -39,21 +38,15 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
         aggregated_weights = super().aggregate_fit(rnd, results, failures)
         
         
-        loss, accuracy = self.compute_metrics(results)
-        self.losses.append(loss)
-        self.accuracies.append(accuracy)
+        # loss, accuracy = self.compute_metrics(results)
+        # self.losses.append(loss)
+        # self.accuracies.append(accuracy)
 
         # Store model parameters
         self.parameters.append(aggregated_weights)
-        data['loss'] = loss
-        data['accuracy'] = accuracy
-        data['num_samples'] = len(results)
-        data['num_failures'] = len(failures)
-        data['parameters'] = aggregated_weights
         # Save aggregated_weights
-        print(c.SUSSCESS(f"Saving round {rnd} aggregated_weights..."))
+        print(c.SUCCESS(f"Saving round {rnd} aggregated_weights..."))
         np.savez(f"round-{rnd}-weights.npz", *aggregated_weights)
-
         return aggregated_weights
         
 
@@ -67,7 +60,6 @@ if __name__ == "__main__":
         strategy = strategy
     )
 
-
-f = open("output/server.txt", "w")
-f.write(str(data))
-f.close()
+    f = open("output/server.txt", "w")
+    f.write(str(data))
+    f.close()

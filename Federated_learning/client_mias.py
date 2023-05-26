@@ -20,7 +20,7 @@ class FlowerClient(fl.client.NumPyClient):
 
     def fit(self, parameters, config):
         self.set_parameters(parameters)
-        data_train = train(model, train_dataloader, epochs=10)
+        data_train = train(model, train_dataloader, epochs=60)
         data['train'] = data_train
         return self.get_parameters(config={}), len(train_dataloader.dataset), {}
 
@@ -42,7 +42,7 @@ with open(f'output/mias_train.csv', mode='w', newline='') as file:
     writer.writerow(['id', 'loss', 'accuracy'])
 
     # Write the data rows
-    for i in range(len(data['train'])):
+    for i in range(len(data['train']['id'])):
         writer.writerow([data['train']['id'][i], data['train']['loss'][i], data['train']['accuracy'][i]])
 
 with open(f'output/mias_test.csv', mode='w', newline='') as file:
@@ -52,7 +52,7 @@ with open(f'output/mias_test.csv', mode='w', newline='') as file:
     writer.writerow(['id', 'loss', 'accuracy'])
 
     # Write the data rows
-    for i in range(len(data['val'])):
+    for i in range(len(data['val']['id'])):
         writer.writerow([data['val']['id'][i], data['val']['loss'][i], data['val']['accuracy'][i]])
 
 print(c.SUCCESS('Saved data to csv!'))
