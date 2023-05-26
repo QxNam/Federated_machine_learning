@@ -1,21 +1,17 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import cv2
 import datetime
-from tqdm import tqdm
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import torch.optim as optim
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, random_split
 
 import flwr as fl
-from torchsummary import summary
 from collections import OrderedDict
-from typing import Dict, List, Optional, Tuple
+import sys
 
 import color
 import multiprocessing as mp
@@ -32,6 +28,8 @@ print(c.TEXT_BOLD('='*80))
 
 BATCH_SIZE = 16
 SIZE_IMAGE = (227, 227)
+
+# --- Data ---
 transform = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize((0.5), (0.5)),
                                 transforms.RandomHorizontalFlip(),
@@ -48,7 +46,6 @@ def pre_process(img):
     img_clahe = clahe.apply(img)
     return img_clahe
 
-# --- Data ---
 class Dataset():
     def __init__(self, path_data, transform=None):
         self.path_data = path_data.upper()
@@ -78,34 +75,9 @@ def dataloader(train_dataset, test_dataset, batch_size=16):
     test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
     return train_dataloader, test_dataloader
 
-def show_transform(dataloader):
-    images, labels = next(iter(dataloader))
-    # Reshape and convert images to a NumPy array
-    # matplotlib requires images with the shape (height, width, 3)
-    images = images.permute(0, 2, 3, 1).numpy()
-    # Denormalize
-    images = images / 2 + 0.5
-    # Create a figure and a grid of subplots
-    fig, axs = plt.subplots(4, 4, figsize=(10, 10))
-    # Loop over the images and plot them
-    for i, ax in enumerate(axs.flat):
-        ax.imshow(images[i], cmap='gray')
-        ax.set_title(labels[i].item())
-        ax.axis("off")
-    # Show the plot
-    fig.tight_layout()
-    plt.show()
-
-def show_origin(dataset):
-    fig, axs = plt.subplots(4, 4, figsize=(10, 10))
-    for i, ax in enumerate(axs.flat):
-        img = cv2.imread(f'dataset/{dataset.path_data}-ROI-Mammography/{dataset.df.iloc[i].Path_save}', 0)
-        ax.imshow(img, cmap='gray')
-        ax.set_title(dataset.df.iloc[i].Cancer)
-        ax.axis("off")
-    fig.tight_layout()
-    plt.show()
-    
+dataset = Dataset('MIAS', transform=transform)
+train_dataset, test_dataset = train_test_split(dataset, test_size=0.2)
+train_dataloader, test_dataloader = dataloader(train_dataset, test_dataset, batch_size=BATCH_SIZE)
 # --- Model ---
 # google net
 class InceptionModule(nn.Module):
@@ -196,147 +168,62 @@ class GoogLeNet(nn.Module):
         x = self.fc(x)
         return x
 
-# lenet
-class Net(nn.Module):
-    def __init__(self) -> None:
-        super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(1, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 53 * 53, 1280)
-        self.fc2 = nn.Linear(1280, 128)
-        self.fc3 = nn.Linear(128, 2)
+model = GoogLeNet(num_classes=2).to(device)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = x.view(-1, 16 * 53 * 53)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
-
-def get_parameters(net) -> List[np.ndarray]:
+def get_parameters(net):
     return [val.cpu().numpy() for _, val in net.state_dict().items()]
 
-def set_parameters(net, parameters: List[np.ndarray]):
+def set_parameters(net, parameters):
     params_dict = zip(net.state_dict().keys(), parameters)
     state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
     net.load_state_dict(state_dict, strict=True)
 
-# --- Training ---
-def train(model, train_loader, criterion, optimizer, device):
-    model.train()
-    running_loss = 0.0
-    correct = 0
-    total = 0
-    loop = tqdm(train_loader, desc='Training')
-    for inputs, labels in loop:
-        inputs = inputs.to(device)
-        labels = labels.to(device)
-        optimizer.zero_grad()
-        outputs = model(inputs)
-        loss = criterion(outputs, labels)
-        loss.backward()
-        optimizer.step()
-        running_loss += loss.item()
-        _, predicted = torch.max(outputs, 1)
-        total += labels.size(0)
-        correct += torch.sum(predicted == labels.data).item()
-        acc_cur = torch.sum(predicted == labels.data).item()/labels.size(0)
-        loop.set_postfix(loss=loss.item(), acc=acc_cur)
-    
-    train_loss = running_loss / len(train_loader)
-    train_acc = correct / total
-    
-    return train_loss, train_acc
-
-def validate(model, val_loader, criterion, device):
-    model.eval()
-    running_loss = 0.0
-    correct = 0
-    total = 0
-    with torch.no_grad():
-        loop = tqdm(val_loader, desc='Validation')
-        for inputs, labels in loop:
-            inputs = inputs.to(device)
-            labels = labels.to(device)
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            running_loss += loss.item()
-            _, predicted = torch.max(outputs, 1)
-            total += labels.size(0)
-            correct += torch.sum(predicted == labels.data).item()
-            acc_cur = torch.sum(predicted == labels.data).item()/labels.size(0)
-            loop.set_postfix(loss=loss.item(), acc=acc_cur)
-    
-    val_loss = running_loss / len(val_loader)
-    val_acc = correct / total
-    
-    return val_loss, val_acc
-
-def fit(model, train_loader, val_loader, criterion, optimizer, device, num_epochs=20):
-    lst_acc = {'train': [], 'val': []}
-    lst_loss = {'train': [], 'val': []}
-    best_val_acc = 0.0
-    for epoch in range(num_epochs):
-        print(c.SUCCESS('Epoch {}/{}'.format(epoch+1, num_epochs)))
-        print('-'*50)
-
-        train_loss, train_acc = train(model, train_loader, criterion, optimizer, device)
-        val_loss, val_acc = validate(model, val_loader, criterion, device)
-        print('Train Loss: {:.4f} - Train Acc: {:.4f}'.format(train_loss, train_acc))
-        print('Val Loss: {:.4f} - Val Acc: {:.4f}'.format(val_loss, val_acc))
-        print('+'*100)
-
-        lst_acc['train'].append(train_acc)
-        lst_acc['val'].append(val_acc)
-        lst_loss['train'].append(train_loss)
-        lst_loss['val'].append(val_loss)
-
-        if val_acc > best_val_acc:
-            best_val_acc = val_acc
-            torch.save(model.state_dict(), 'result/best_model.pth')
-    print(c.SUCCESS('Training and validation completed!'))
-    return lst_acc, lst_loss
-
-# --- client ---
-class client():
-    def __init__(self, name_client, batch_size, model, criterion, optimizer):
-        self.name_client = name_client.upper()
-        self.df = Dataset(self.name_client, transform)
-        self.df_train, self.df_val = train_test_split(self.df)
-        self.train_loader, self.val_loader = dataloader(self.df_train, self.df_val, batch_size)
-        self.model = model
-        self.criterion = criterion
-        self.optimizer = optimizer
-
-    def run(self, epochs=5):
-        lst_acc, lst_loss = fit(self.model, self.train_loader, self.val_loader, self.criterion, self.optimizer, device, num_epochs=epochs)
-        plt.figure(figsize=(15, 5))
-        plt.suptitle(f'Client {self.name_client}')
-        plt.subplot(1, 2, 1)
-        plt.plot(lst_acc['train'], label='train')
-        plt.plot(lst_acc['val'], label='val')
-        plt.title('Accuracy')
-        plt.legend()
-        plt.subplot(1, 2, 2)
-        plt.plot(lst_loss['train'], label='train')
-        plt.plot(lst_loss['val'], label='val')
-        plt.title('Loss')
-        plt.legend()
-        plt.savefig(f'result/{self.name_client}.png')
-        plt.show()
-    
-    def get_summary(self):
-        return summary(self.model, (1, 227, 227))
-    
+# --- Define Flower client ---
+class FlowerClient(fl.client.NumPyClient):
     def get_parameters(self):
-        return get_parameters(self.model)
+        return [param.detach().numpy() for param in model.parameters()]
 
-model = GoogLeNet(num_classes=2).to(device)
-# model = Net().to(device)
-criteria = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=0.01)
-client1 = client('DDSM', 8, model, criteria, optimizer)
-client1.run(10)
+    def set_parameters(self, parameters):
+        params_dict = zip(model.parameters(), parameters)
+        state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
+        model.load_state_dict(state_dict, strict=True)
+
+    def fit(self, parameters, config):
+        self.set_parameters(parameters)
+        model.train()
+        for inputs, labels in train_dataloader:
+            optimizer.zero_grad()
+            outputs = model(inputs.unsqueeze(1).float())
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+        return self.get_parameters(), len(train_dataloader), {}
+
+    def evaluate(self, parameters, config):
+        self.set_parameters(parameters)
+        model.eval()
+        total_loss = 0.0
+        total_correct = 0
+        with torch.no_grad():
+            for inputs, labels in test_dataloader:
+                outputs = model(inputs.unsqueeze(1).float())
+                _, predicted = torch.max(outputs.data, 1)
+                total_correct += (predicted == labels).sum().item()
+                loss = criterion(outputs, labels)
+                total_loss += loss.item() * inputs.size(0)
+        accuracy = total_correct / len(test_dataset)
+        return total_loss, len(test_dataset), {"accuracy": accuracy}
+
+    def set_parameters(self, parameters):
+        idx = 0
+        for param in model.parameters():
+            param.data = torch.from_numpy(parameters[idx])
+            idx += 1
+# Start Flower client
+fl.client.start_numpy_client(
+        server_address="localhost:"+str(sys.argv[1]), 
+        client=FlowerClient(), 
+        grpc_max_message_length = 1024*1024*1024
+)
