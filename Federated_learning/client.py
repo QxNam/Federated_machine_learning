@@ -172,26 +172,69 @@ class GoogLeNet(nn.Module):
 def train(net, trainloader, epochs):
     """Train the model on the training set."""
     criterion = torch.nn.CrossEntropyLoss()
-    optimizer = torch.optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+    optimizer = torch.optim.SGD(net.parameters(), lr=0.01, momentum=0.9)
+    correct, total, running_loss = 0, 0, 0.0
+    data = {'id': [], 'loss': [], 'accuracy': []}
+    print('#'*20)
+    print('#',c.SUCCESS('TRAINING'))
+    print('#'*20)
     for _ in range(epochs):
-        for images, labels in tqdm(trainloader):
+        print(c.SUCCESS('Epoch:'), f'{_+1}/{epochs}')
+        loop = tqdm(enumerate(trainloader), ncols=100, desc='Training')
+        for i, (images, labels) in loop:
+            images = images.to(device)
+            labels = labels.to(device)
             optimizer.zero_grad()
-            criterion(net(images.to(device)), labels.to(device)).backward()
+            outputs = net(images)
+            loss = criterion(outputs, labels)
+            loss.backward()
             optimizer.step()
+
+            running_loss += loss.item()
+            _, predicted = torch.max(outputs, 1)
+            total += labels.size(0)
+            correct += torch.sum(predicted == labels.data).item()
+            if i%2==0:
+                loss = running_loss / (i+1)
+                acc = correct / total
+                data['id'].append((_+1)+(i+1))
+                data['loss'].append(loss)
+                data['accuracy'].append(acc)
+        loss = running_loss/len(trainloader)
+        correct = correct / total
+        print(f'Loss: {loss:.4f}, Accuracy: {correct:.4f}')
+        print(c.TEXT_BOLD('+'*20))
+    return data
 
 
 def test(net, testloader):
     """Validate the model on the test set."""
+    net.eval()
     criterion = torch.nn.CrossEntropyLoss()
-    correct, loss = 0, 0.0
+    correct, total, loss = 0, 0, 0.0
+    data = {'id': [], 'loss': [], 'accuracy': []}
+    print('#'*20)
+    print('#',c.SUCCESS('TESTING'))
+    print('#'*20)
     with torch.no_grad():
-        for images, labels in tqdm(testloader):
+        loop = tqdm(testloader, desc='Testing', ncols=80)
+        for images, labels in loop:
             outputs = net(images.to(device))
             labels = labels.to(device)
-            loss += criterion(outputs, labels).item()
+            loss_cur = criterion(outputs, labels).item()
+            loss += loss_cur
+            total += labels.size(0)
             correct += (torch.max(outputs.data, 1)[1] == labels).sum().item()
-    accuracy = correct / len(testloader.dataset)
-    return loss, accuracy
+            acc_cur = (torch.max(outputs.data, 1)[1] == labels).sum().item()/labels.size(0)
+            loop.set_postfix(loss=loss_cur, acc=acc_cur)
+            data['id'] = len(data['id'])+1
+            data['loss'].append(loss_cur)
+            data['accuracy'].append(acc_cur)
+    accuracy = correct / total
+    loss = loss / len(testloader)
+    print(f'Loss: {loss:.4f}, Accuracy: {accuracy:.4f}')
+    print(c.WARNING('='*80))
+    return loss, accuracy, data
 
 # #############################################################################
 # 2. Federation of the pipeline with Flower
