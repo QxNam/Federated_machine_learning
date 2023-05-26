@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import cv2
 import datetime
+from tqdm import tqdm 
 
 import torch
 import torch.nn as nn
@@ -17,19 +18,22 @@ import color
 import multiprocessing as mp
 import warnings
 warnings.filterwarnings('ignore')
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 cores = mp.cpu_count()
 c = color.clr()
-print(c.TEXT_BOLD('='*80))
-print(c.SUCCESS('Day:'), datetime.datetime.now())
-print(c.SUCCESS('Device:'), device)
-print(c.SUCCESS('Core:'), cores)
-print(c.TEXT_BOLD('='*80))
 
+print(c.TEXT_BOLD('#'*80))
+print(c.SUCCESS('# Day:'), datetime.datetime.now())
+print(c.SUCCESS('# Device:'), device)
+print(c.SUCCESS('# Core:'), cores)
+print(c.TEXT_BOLD('#'*80))
+
+# #############################################################################
+# 1. Regular PyTorch pipeline: nn.Module, train, test, and DataLoader
+# #############################################################################
+NAME_DATA = 'MIAS'
 BATCH_SIZE = 16
 SIZE_IMAGE = (227, 227)
-
-# --- Data ---
 transform = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize((0.5), (0.5)),
                                 transforms.RandomHorizontalFlip(),
@@ -64,20 +68,17 @@ class Dataset():
         label = self.df.iloc[index]['Cancer']
         return image, label
     
-def train_test_split(dataset, test_size=0.2):
+def train_test_split(dataset, test_size):
     s_test = int(test_size * dataset.__len__())
     s_train = dataset.__len__() - s_test
     train_dataset, test_dataset = random_split(dataset, [s_train, s_test])
     return train_dataset, test_dataset
     
-def dataloader(train_dataset, test_dataset, batch_size=16):
+def dataloader(train_dataset, test_dataset, batch_size):
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
     return train_dataloader, test_dataloader
 
-dataset = Dataset('MIAS', transform=transform)
-train_dataset, test_dataset = train_test_split(dataset, test_size=0.2)
-train_dataloader, test_dataloader = dataloader(train_dataset, test_dataset, batch_size=BATCH_SIZE)
 # --- Model ---
 # google net
 class InceptionModule(nn.Module):
@@ -168,60 +169,62 @@ class GoogLeNet(nn.Module):
         x = self.fc(x)
         return x
 
+def train(net, trainloader, epochs):
+    """Train the model on the training set."""
+    criterion = torch.nn.CrossEntropyLoss()
+    optimizer = torch.optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+    for _ in range(epochs):
+        for images, labels in tqdm(trainloader):
+            optimizer.zero_grad()
+            criterion(net(images.to(device)), labels.to(device)).backward()
+            optimizer.step()
+
+
+def test(net, testloader):
+    """Validate the model on the test set."""
+    criterion = torch.nn.CrossEntropyLoss()
+    correct, loss = 0, 0.0
+    with torch.no_grad():
+        for images, labels in tqdm(testloader):
+            outputs = net(images.to(device))
+            labels = labels.to(device)
+            loss += criterion(outputs, labels).item()
+            correct += (torch.max(outputs.data, 1)[1] == labels).sum().item()
+    accuracy = correct / len(testloader.dataset)
+    return loss, accuracy
+
+# #############################################################################
+# 2. Federation of the pipeline with Flower
+# #############################################################################
+
+dataset = Dataset(NAME_DATA, transform=transform)
+train_dataset, test_dataset = train_test_split(dataset, test_size=0.2)
+train_dataloader, test_dataloader = dataloader(train_dataset, test_dataset, batch_size=BATCH_SIZE)
 model = GoogLeNet(num_classes=2).to(device)
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-def get_parameters(net):
-    return [val.cpu().numpy() for _, val in net.state_dict().items()]
-
-def set_parameters(net, parameters):
-    params_dict = zip(net.state_dict().keys(), parameters)
-    state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
-    net.load_state_dict(state_dict, strict=True)
-
-# --- Define Flower client ---
+# Define Flower client
 class FlowerClient(fl.client.NumPyClient):
     def get_parameters(self, config):
         return [val.cpu().numpy() for _, val in model.state_dict().items()]
 
-    # Xóa tham số config khỏi phương thức get_parameters()
     def set_parameters(self, parameters):
         params_dict = zip(model.state_dict().keys(), parameters)
         state_dict = OrderedDict({k: torch.tensor(v) for k, v in params_dict})
         model.load_state_dict(state_dict, strict=True)
-            
-    def fit(self, parameters):
-        self.set_parameters(parameters)
-        model.train()
-        for inputs, labels in train_dataloader:
-            optimizer.zero_grad()
-            outputs = model(inputs.unsqueeze(1).float())
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-        return self.get_parameters(), len(train_dataloader), {}
 
-    def evaluate(self, parameters):
+    def fit(self, parameters, config):
         self.set_parameters(parameters)
-        model.eval()
-        total_loss = 0.0
-        total_correct = 0
-        with torch.no_grad():
-            for inputs, labels in test_dataloader:
-                outputs = model(inputs.unsqueeze(1).float())
-                _, predicted = torch.max(outputs.data, 1)
-                total_correct += (predicted == labels).sum().item()
-                loss = criterion(outputs, labels)
-                total_loss += loss.item() * inputs.size(0)
-        accuracy = total_correct / len(test_dataset)
-        return total_loss, len(test_dataset), {"accuracy": accuracy}
+        train(model, train_dataloader, epochs=1)
+        return self.get_parameters(config={}), len(train_dataloader.dataset), {}
 
-    
+    def evaluate(self, parameters, config):
+        self.set_parameters(parameters)
+        loss, accuracy = test(model, test_dataloader)
+        return loss, len(test_dataloader.dataset), {"accuracy": accuracy}
+
 
 # Start Flower client
 fl.client.start_numpy_client(
-        server_address="127.0.0.1:8080", 
-        client=FlowerClient(), 
-        grpc_max_message_length = 1024*1024*1024
+    server_address="127.0.0.1:8080",
+    client=FlowerClient(),
 )
