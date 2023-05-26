@@ -1,5 +1,9 @@
 import flwr as fl
 import numpy as np
+import color
+c = color.clr()
+
+data = {'avg_loss': 0, 'avg_accuracy': 0, 'loss': 0, 'accuracy': 0, 'num_samples': 0, 'num_failures': 0, 'parameters': ''}
 
 class SaveModelStrategy(fl.server.strategy.FedAvg):
     def __init__(self):
@@ -24,7 +28,9 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
 
         avg_loss = total_loss / num_results
         avg_accuracy = total_accuracy / num_results
-
+        data['avg_loss'] = avg_loss
+        data['avg_accuracy'] = avg_accuracy
+        print(c.SUCCESS(f"Average loss: {avg_loss}, Average accuracy: {avg_accuracy}"))
         return avg_loss, avg_accuracy
     
     def aggregate_fit(
@@ -39,9 +45,13 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
 
         # Store model parameters
         self.parameters.append(aggregated_weights)
-
+        data['loss'] = loss
+        data['accuracy'] = accuracy
+        data['num_samples'] = len(results)
+        data['num_failures'] = len(failures)
+        data['parameters'] = aggregated_weights
         # Save aggregated_weights
-        print(f"Saving round {rnd} aggregated_weights...")
+        print(c.SUSSCESS(f"Saving round {rnd} aggregated_weights..."))
         np.savez(f"round-{rnd}-weights.npz", *aggregated_weights)
 
         return aggregated_weights
@@ -53,6 +63,11 @@ if __name__ == "__main__":
     
     fl.server.start_server(
         server_address="0.0.0.0:8080",
-        config=fl.server.ServerConfig(num_rounds=3) ,
+        config=fl.server.ServerConfig(num_rounds=1) ,
         strategy = strategy
     )
+
+
+f = open("output/server.txt", "w")
+f.write(str(data))
+f.close()
