@@ -15,22 +15,23 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
         self.parameters = []
         
     def compute_metrics(self, results):
-        # Compute loss and accuracy based on results from clients
-        # You need to implement this based on your specific use case
-        # Iterate over the results to calculate the metrics
-        total_loss = 0.0
-        total_accuracy = 0.0
-        num_results = len(results)
+        print(results)
+        # # Compute loss and accuracy based on results from clients
+        # # You need to implement this based on your specific use case
+        # # Iterate over the results to calculate the metrics
+        # total_loss = 0.0
+        # total_accuracy = 0.0
+        # num_results = len(results)
 
-        for result in results:
-            loss = result["loss"]
-            accuracy = result["accuracy"]
-            total_loss += loss
-            total_accuracy += accuracy
+        # for result in results:
+        #     loss = result["loss"]
+        #     accuracy = result["accuracy"]
+        #     total_loss += loss
+        #     total_accuracy += accuracy
 
-        avg_loss = total_loss / num_results
-        avg_accuracy = total_accuracy / num_results
-        return avg_loss, avg_accuracy
+        # avg_loss = total_loss / num_results
+        # avg_accuracy = total_accuracy / num_results
+        # return avg_loss, avg_accuracy
     
     def aggregate_fit(
         self, rnd, results, failures
@@ -38,7 +39,7 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
         aggregated_weights = super().aggregate_fit(rnd, results, failures)
         
         
-        # loss, accuracy = self.compute_metrics(results)
+        self.compute_metrics(results)
         # self.losses.append(loss)
         # self.accuracies.append(accuracy)
 
